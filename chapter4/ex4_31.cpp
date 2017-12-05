@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+
+using std::vector;
+using std::cout;
+using std::endl;
+
+int main(int argc, char **argv)
+{
+  vector<int> ivec;
+  
+  vector<int>::size_type cnt = ivec.size();
+
+  for(vector<int>::size_type ix = 0;
+      ix != ivec.size(); ix++, cnt--){
+    ivec[ix] = cnt;
+  }
+  cout << endl;
+  return 0;
+}
