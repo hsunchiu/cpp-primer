@@ -1,0 +1,8 @@
+* What is the difference between `int`, `long`, ``long long`, `short`? What is the difference between `signed` and `unsigned`? What is the difference between `float` and `double`?
+- int, long, long long, short , they are all integer.
+  short take at least 16bit, int take at least 16bit, long takes at least 32 bit, long long take at least 64bit.
+  at the same time. the length the type takes: int >= short, long >= int, long long >= long
+- unsigned type always is bigger than or equal zero, signed type can express a value negative.
+- float have 6 bit significant digit. double have 10 bit significant digit.
+  
+

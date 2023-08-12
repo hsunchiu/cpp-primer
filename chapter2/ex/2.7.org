@@ -1,0 +1,12 @@
+* Question:
+What values do these literals represent? What type does each have?
+
+(a) "Who goes with F\145rgus?\012"
+(b) 3.14e1L
+(c) 1024f
+(d) 3.14L
+* Answer:
+a. a string: "Who geos whit F\n"
+b. long double: 3.14e1
+c. float: 1024.0
+d. long double: 3.14

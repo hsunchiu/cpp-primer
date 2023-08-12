@@ -1,0 +1,12 @@
+* Question:
+What, if any, are the differences between the following definitions:
+#+begin_src c++
+int month = 9, day = 7;
+int month = 09, day = 07;
+#+end_src
+
+* Answer:
+The first line's integer is decimal.
+The second line:
+1. int month = 09 is invalid, cause octal don't have digit 9.
+2. day is octal.
