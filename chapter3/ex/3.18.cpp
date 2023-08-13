@@ -1,9 +1,11 @@
 #include <vector>
 
-int main()
-{
+int main() {
+  // std::vector<int> ivec;
+  // ivec[0] = 42;
+
   std::vector<int> ivec;
-  ivec[0] = 42;
-  
+  ivec.push_back(42);
+
   return 0;
 }

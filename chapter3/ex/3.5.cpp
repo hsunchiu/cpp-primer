@@ -7,14 +7,12 @@ using std::endl;
 using std::string;
 
 int main() {
-  string str;
-  while (getline(cin, str)) {
-    for (char c : str) { // will not change str
-
-      c = 'X';
-    }
-    cout << str << endl;
+  string in, s;
+  while (cin >> in) {
+    s = s + in + ' ';
   }
+
+  cout << s << endl;
 
   return 0;
 }
