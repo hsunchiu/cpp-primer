@@ -1,4 +1,4 @@
-#include "8.7.h"
+#include "8.8.h"
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
@@ -13,7 +13,7 @@ int main(int argc, char **argv) {
   }
 
   std::ifstream ifs(argv[1]);
-  std::ofstream ofs(argv[2]);
+  std::ofstream ofs(argv[2], std::iostream::app);
 
   // read the file, if the file scream is okay
   if (ifs) {
