@@ -1,0 +1,16 @@
+* Question:
+Exercise 9.10: What are the types of the following four objects?
+#+begin_src cpp
+vector<int> v1;
+const vector<int> v2;
+auto it1 = v1.begin(), it2 = v2.begin();
+auto it3 = v1.cbegin(), it4 = v2.cbegin();
+#+end_src
+
+* Answer:
+#+begin_src cpp
+  vector<int> v1;                 // a vector<int> to store int element
+  const vector<int> v2;           // a const vector<int>, but may have no element(using default constructor).
+  auto it1 = v1.begin(), it2 = v2.begin(); // vector<int>::iterator
+  auto it3 = v1.cbegin(), it4 = v2.cbegin(); // vector<int>::const_iterator
+#+end_src

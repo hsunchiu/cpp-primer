@@ -1,0 +1,23 @@
+* Question:
+Exercise 9.21: Explain how the loop from page 345 that used the return
+from insert to add elements to a list would work if we inserted into a
+vector instead.
+code in page 345
+#+begin_src cpp
+  list<string> 1st;
+  auto iter = 1st.begin();
+  while (cin >> word)
+    iter = 1st.insert(iter, word); // same as calling push_front
+#+end_src
+
+
+
+* Answer:
+#+begin_src cpp
+  vector<string> sv;
+  vector iter = sv.begin();
+  while(cin >> word)
+    iter = sv.insert(iter,word)
+
+#+end_src
+The first call to insert takes the string we just read and puts it in front of the element denoted by iter. The value returned by insert is an iterator referring to this new element. We assign that iterator to iter and repeat the while, reading another word. As long as there are words to insert, each trip through the while inserts a new element ahead of iter and reassigns to iter the location of the newly inserted element. That element is the (new) first element. Thus, each iteration inserts an element ahead of the first element in the vector.

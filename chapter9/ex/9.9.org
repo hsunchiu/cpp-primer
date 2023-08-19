@@ -1,0 +1,6 @@
+* Question:
+Exercise 9.9: What is the difference between the begin and cbegin
+functions?
+* Answer:
+begin return a common iterator which has write access, otherwise, cbegin return const_iterator have no access.
+At the same time,  if we use `auto` to do type inference(since cpp11), we will get different iterator type.(Don't add `const` anymore)

@@ -1,0 +1,8 @@
+* Question:
+Exercise 9.3: What are the constraints on the iterators that form iterator
+ranges?
+
+* answer:
+1. two interator, begin refer to the first element, end for the one past the last element.
+2. left-inclusive interval: [begin, end)
+

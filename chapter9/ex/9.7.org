@@ -1,0 +1,6 @@
+* Question:
+Exercise 9.7: What type should be used as the index into a vector of
+ints?
+
+* Answer:
+difference_type(I think, if just for index, because index can't be negative).

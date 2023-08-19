@@ -1,0 +1,11 @@
+* Question:
+Exercise 9.12: Explain the differences between the constructor that takes a
+container to copy and the constructor that takes two iterators.
+
+* Answer:
+- constructor that takes a container: To create a container as a copy of another container, the container and element
+types must match.
+- with two iterators: When we pass iterators, there is no requirement that the container
+types be identical. Moreover, the element types in the new and original containers can
+differ as long as it is possible to convert  the elements we’re copying
+to the element type of the container we are initializing.
