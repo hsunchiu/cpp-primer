@@ -1,0 +1,12 @@
+* Question:
+Exercise 9.40: If the program in the previous exercise reads 256 words,
+what is its likely capacity after it is resized? What if it reads 512? 1,000?
+1,048?
+
+* Answer:
+| read words | capacity after resized |
+|        256 | 1024 + 512             |
+|        512 | 1024 + 512             |
+|       1000 | 1024 + 512             |
+|       1048 | 2048 + 1024            |
+

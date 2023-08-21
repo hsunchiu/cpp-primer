@@ -1,0 +1,15 @@
+* Question:
+Exercise 9.39: Explain what the following program fragment does:
+#+begin_src cpp
+vector<string> svec;
+svec.reserve(1024);
+string word;
+while (cin >> word)
+        svec.push_back(word);
+svec.resize(svec.size()+svec.size()/2);
+#+end_src
+* Answer:
+reserved 1024 elements in string container, and get every word to the string. finally, add elements(empty string)'s number to svec.size() + svec.size()/2.
+
+
+

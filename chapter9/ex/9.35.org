@@ -1,0 +1,6 @@
+* Question:
+Exercise 9.35: Explain the difference between a vector’s capacity and
+its size.
+
+* Answer:
+The size of a container is the number of elements it already holds, its capacity is how elements can hold before more space must be allocated.
