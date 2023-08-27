@@ -4,14 +4,16 @@
   standard output
  */
 
+#include <algorithm>
 #include <iostream>
 #include <iterator>
 #include <vector>
+
 using namespace std;
 
 int main() {
   std::istream_iterator<int> in_iter(std::cin), eof;
-  std::ostream_iterator<int> out_iter(cout, " ");
+  // std::ostream_iterator<int> out_iter(cout, " ");
 
   std::vector<int> vec;
   while (in_iter != eof)
