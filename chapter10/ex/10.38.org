@@ -1,0 +1,25 @@
+* Question:
+Exercise 10.38: List the five iterator categories and the operations that each
+supports.
+
+* Answer:
+| iterator categories    | supported operations                                                 |
+|------------------------+----------------------------------------------------------------------|
+| input iterator         | Equality and inequality(`==`, `!=`)                                  |
+|                        | Prefix and postfix increment(`++`)                                   |
+|                        | Dereference operator(`*`), only on the right-hand side               |
+|                        | Arrow operator(`->`) to access the member of the container.          |
+| output iterator        | Prefix and postfix increment(`++`)                                   |
+|                        | Dereference(*), only as the left-hand of an assignment               |
+| forward iterator       | Forward iterators support all the operations of both                 |
+|                        | input iterators and output iterators.Can move in only one direction. |
+|                        | Multiple pass.                                                       |
+| bidirectional iterator | Supports all the operators of a forward iterator, can read and write |
+|                        | forward and backward.                                                |
+|                        | Also supports prefix and postfix decrement(--) operator.             |
+| random-access iterator | Supports all operators of bidirectional iterator. Moreover:          |
+|                        | the relational operators(`<`, `<=`, `>` and `>=`)                    |
+|                        | Addition and subtraction operators(`+`, `+=`, `-` and `-=`)          |
+|                        | The subtraction operator(`-`)                                        |
+|                        | The subscript operator (`iter[n]`)                                   |
+

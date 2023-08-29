@@ -1,0 +1,8 @@
+* Question:
+Exercise 10.40: What kinds of iterators do you think copy requires? What
+about reverse or unique?
+
+* Answer:
+Copy: input iterator(first and second parameter.) and output iterator(the second parameter).
+reverse: bidirectional iterator.
+unique: bidirectional iterator.(I think `unique` will resort the elements of the container, it's not good to use forward iterator to resort.)
