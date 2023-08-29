@@ -1,0 +1,6 @@
+* Question:
+Exercise 11.1: Describe the differences between a map and a vector.
+
+* Answer:
+A map use key to index value, otherwise, A vector using postion to index the value.
+
