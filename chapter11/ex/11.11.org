@@ -1,0 +1,6 @@
+* Question:
+Exercise 11.11: Redefine bookstore without using decltype.
+
+* Answer:
+please refer to 11.11.cpp
+

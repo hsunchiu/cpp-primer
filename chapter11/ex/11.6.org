@@ -1,0 +1,7 @@
+* Question:
+Exercise 11.6: Explain the difference between a set and a list. When might you use one or the other?
+
+* Answer:
+A set has unique element, A list can contain same type elements with bidirectional linked list.
+If you want a fast access and unique element, choose set.
+If you want a data structure inserted more ofen, choose list.

@@ -1,0 +1,8 @@
+* Question:
+Exercise 11.5: Explain the difference between a map and a set. When
+might you use one or the other?
+
+*  Answer:
+map has the key and the value; set only has key type.
+when to use map: some associative informs, for example, ID with name
+when to use set: for math caculate, math set.
