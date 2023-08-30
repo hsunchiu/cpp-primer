@@ -1,0 +1,16 @@
+* Question:
+Exercise 11.18: Write the type of map_it from the loop on page 430
+without using auto or decltype.
+
+* Answer:
+#+begin_src cpp
+  // get an iterator positioned on the first element
+  std::map<std::string,size_t>::const_iterator map_it = word_count.cbegin();
+  // compare the current iterator to the off-the-end iterator
+  while (map_it != word_count.cend()) {
+    // dereference the iterator to print the element key--value pairs
+    cout << map_it->first << " occurs "
+         << map_it->second << " times" << endl;
+    ++map_it;// increment the iterator to denote the next element
+  }
+#+end_src

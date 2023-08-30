@@ -1,0 +1,11 @@
+* Question:
+Exercise 11.16: Using a map iterator write an expression that assigns a
+value to an element.
+
+* Answer:
+#+begin_src cpp
+  std::map<int, std::string> map;
+  map[25] = "Alan";
+  std::map<int, std::string>::iterator it = map.begin();
+  it->second = "Wang";
+#+end_src

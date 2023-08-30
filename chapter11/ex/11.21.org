@@ -1,0 +1,16 @@
+* Question:
+Exercise 11.21: Assuming word_count is a map from string to size_t
+and word is a string, explain the following loop:
+#+begin_src cpp
+    while (cin >> word)
+      ++word_count.insert({word, 0}).first->second;
+#+end_src
+
+
+* Answer:
+#+begin_src cpp
+  word_count.insert({word,0}) // insert a {word, 0} to the map, it return a pair with a iterator and bool
+  word_count.insert{{word,0}}.first // get the iterator
+  word_count.insert{{word,0}}.first->second // access the value of the map
+  ++word_count.insert{{word,0}}.firts->second // update the counter. is it correct? if the word has been in map, it will not insert, just update the counter, If the word not exist, it will insert correctly, and set counter to 0, and the update to 1.
+#+end_src

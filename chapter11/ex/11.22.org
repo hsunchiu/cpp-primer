@@ -1,0 +1,9 @@
+* Question:
+Exercise 11.22: Given a map<string, vector<int>>, write the types
+used as an argument and as the return value for the version of insert that
+inserts one element.
+
+* Answer:
+type: map<string,vector>
+return types for the insert: pair<map<string,vector>::iterator, bool>
+
