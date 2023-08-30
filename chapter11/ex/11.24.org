@@ -1,0 +1,11 @@
+* Question:
+Exercise 11.24: What does the following program do?
+#+begin_src c++
+  map<int,int> m;
+  m[0] = 1;
+#+end_src
+
+* Answer:
+create am empty map.
+m[0] not found, so inialize the map with 0;
+the newly insterted element is fetched and is given the value 1.
