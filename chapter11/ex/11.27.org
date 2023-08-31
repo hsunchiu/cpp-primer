@@ -1,0 +1,7 @@
+* Question:
+Exercise 11.27: What kinds of problems would you use count to solve?
+When might you use find instead?
+
+* Answer:
+`count` just return the number of the element with zero, it is not an iterator, we can't access the value;
+When we want to access the map's element, we can use `find` instead.

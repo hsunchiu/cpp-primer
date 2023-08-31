@@ -1,0 +1,8 @@
+* Question:
+Exercise 11.29: What do upper_bound, lower_bound, and
+equal_range return when you pass them a key that is not in the container?
+
+* Answer:
+If there is no element for this key, then lower_bound and upper_bound will be
+equal. Both will refer to the point at which this key can be inserted while maintaining
+the container order. same as equal_range for the equal_range's return pair `first` and `second`.

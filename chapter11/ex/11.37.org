@@ -1,0 +1,8 @@
+* Question:
+Exercise 11.37: What are the advantages of an unordered container as
+compared to the ordered version of that container? What are the advantages
+of the ordered version?
+
+* Answer:
+unordered container: Maybe have a better performance than ordered container.
+ordered container: It's easier to use ordered container.

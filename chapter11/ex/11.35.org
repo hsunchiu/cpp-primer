@@ -1,0 +1,11 @@
+* Question:
+Exercise 11.35: In buildMap, what effect, if any, would there be from
+rewriting
+#+begin_src cpp
+  trans_map[key] = value.substr(1);
+  as trans_map.insert({key, value.substr(1)})?
+#+end_src
+
+* Answer:
+- use subscript operator: if a word does appear multiple times, our loops will put the last corresponding phrase into trans_map
+- use insert: if a word does appear multiple times, our loops will put the first corresponding phrase into trans_map

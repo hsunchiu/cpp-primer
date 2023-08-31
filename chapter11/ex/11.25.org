@@ -1,6 +1,19 @@
 * Question:
+<<<<<<< HEAD
 Exercise 11.25: Contrast the following program with the one in the previous exercise
 #+begin_src cpp
   vector<int> v; //Since the vector v is empty, the subsript operator [0] can not access v[0].
   v[0] = 1;//  Thus, the statement v[0] = 1; is meaningless.
 #+end_src
+=======
+Exercise 11.25: Contrast the following program with the one in the previous
+exercise
+#+begin_src cpp
+  vector<int> v;
+  v[0] = 1;
+#+end_src
+
+* Answer:
+create an empty int vector, and want to set the first element' value to 1;
+the compile will not check the over-bound, but a runtime error will arise.
+>>>>>>> 2237ad6 (finish chapter11)

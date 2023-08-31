@@ -1,0 +1,11 @@
+* Question:
+Exercise 11.30: Explain the meaning of the operand pos.first->second
+used in the output expression of the final program in this section.
+
+
+* Answer:
+#+begin_src cpp
+  pos \\is a pair which contains the `begin` iterator and `end` iterator
+  pos.first \\ access the map's element's key
+  pos.first->second \\ access the map's member's value.
+#+end_src

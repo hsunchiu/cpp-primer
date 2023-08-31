@@ -1,0 +1,9 @@
+* Question:
+Exercise 11.28: Define and initialize a variable to hold the result of calling
+find on a map from string to vector of int.
+
+* Answer:
+#+begin_src cpp
+  // Maybe use the default constructor;
+  std::map<std::string, std::vector<int>>::iterator map_it;
+#+end_src

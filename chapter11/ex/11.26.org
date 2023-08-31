@@ -1,0 +1,13 @@
+* Question:
+Exercise 11.26: What type can be used to subscript a map? What type does
+the subscript operator return? Give a concrete example—that is, define a map
+and then write the types that can be used to subscript the map and the type
+that would be returned from the subscript operator.
+
+* Answer:
+I think every comparable type could be used to the subscript of map. For,example, Integers, strings and others. The subscript operator try to access the value in a map. For example:
+#+begin_src cpp
+  map<std::string,int> m = {"hello", 1};         // define a map
+  std::map<std::string,int>::iterator i = 1;     // a map iterator
+  std::map<std::string,int>::mapped_type return_type = map[i] // the return type is a mapped_type
+#+end_src
