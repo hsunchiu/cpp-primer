@@ -1,0 +1,14 @@
+* Question:
+Exercise 12.1: How many elements do b1 and b2 have at the end of this
+code?
+#+begin_src cpp
+  StrBlob b1;
+  {
+    StrBlob b2 = {"a", "an", "the"};
+    b1 = b2;
+    b2.push_back("about");
+  }
+#+end_src
+
+* Answer
+After the last `}`, b2 will be out of the scope and be destroyed,so it meaningless to talk about how many elements b2 has. b1 has four elements.
