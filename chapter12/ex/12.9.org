@@ -1,0 +1,18 @@
+* Question:
+Exercise 12.9: Explain what happens in the following code:
+#+begin_src cpp
+  int *q = new int(42), *r = new int(100);
+  r = q;
+  auto q2 = make_shared<int>(42),
+  make_shared<int>(100);
+  r2 = q2;
+#+end_src
+
+* Answer:
+#+begin_src cpp
+  int *q = new int(42), *r = new int(100); // create a dymatic memory to store int 42, q the the point. same as r for int 100
+  r = q;                                   // assign the value q to r, r q have the same pionter to int 42. memory leaks for 42
+  auto q2 = make_shared<int>(42), r2= make_shared<int>(100); // q2, r2 is the shared_ptr, respectively pioint to 42, and 100.
+  r2 = q2;                                                   // assign q2 to r2, r2 and q2 point to 32, memory for 100 will be freed, 32's reference will be changed to 2.
+
+#+end_src

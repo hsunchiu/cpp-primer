@@ -1,0 +1,8 @@
+* Questions:
+Exercise 12.3: Does this class need const versions of push_back and
+pop_back? If so, add them. If not, why aren’t they needed?
+
+* Answer:
+View1: It's not necessary,if we write the class with const version and non-const version, compiler will link the const version with const parameter, non-const version with non-const version. At the same time, the const version and non-const version have the same semantic. By the way, the member of the class actually will not be changed by the program.
+
+View2: If we define the object with const  version aka `const Blob;`, If we want change the member of the class, It's helpful to let the compile raise the compile error.

@@ -1,0 +1,19 @@
+* Question:
+  Exercise 12.8: Explain what if anything is wrong with the following function.
+  #+begin_src cpp
+  bool b() {
+      int* p = new int;
+      // ...
+      return p;
+  }
+  #+end_src
+
+* Answer:
+Wrong return type, correction like this:
+#+begin_src cpp
+  int * b(){
+    int *p = new int;
+    // ...
+    return p;
+  }
+#+end_src
