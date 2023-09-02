@@ -1,0 +1,12 @@
+* Question:
+Exercise 12.11: What would happen if we called process as follows?
+#+begin_src cpp
+  proccess(shared_ptr<int>(p.get()));
+#+end_src
+
+* Answer:
+#+begin_src cpp
+  p.get(); // it will get the pointer to the memony, the result is a common pointer
+  shared_ptr<int>(p.get()); // it will create a temporary shared_ptr, it have the same pointer pointed to the memory, have a reference count 1 just like p.
+  process(shared_ptr<int>(p.get)); // After the process the temporary will out of the scope, it will free the memory. p will be a dangling shared_ptr.
+#+end_src

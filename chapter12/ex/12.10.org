@@ -1,0 +1,13 @@
+* Question:
+Exercise 12.10: Explain whether the following call to the process function
+defined on page 464 is correct. If not, how would you correct the call?
+#+begin_src cpp
+  shared_ptr<int> p(new int(42));
+  process(shared_ptr<int>(p));
+#+end_src
+
+* Answer:
+#+begin_src cpp
+  shared_ptr<int> p(new int(42)); // create a shared_ptr p and allocate the memory fo int 42
+  process(shared_ptr<int>(p));    // convert shared_ptr<int> to shared_prt<int>, copy the p the the paremeter. the reference to the dymatic memory will be 2.
+#+end_src

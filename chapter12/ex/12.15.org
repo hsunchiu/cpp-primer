@@ -1,0 +1,12 @@
+* Question:
+Exercise 12.15: Rewrite the first exercise to use a lambda (§ 10.3.2, p.
+388) in place of the end_connection function.
+
+* Answer:
+#+begin_src cpp
+  void f(destination &d /* other parameters */)
+  {
+    connection c = connect(&d); // use the connection
+    shared_ptr<connection> p(&c, [&c](){disconnection(*p);});// when f exits, even if by an exception, the connection will be properly closed
+  }
+#+end_src

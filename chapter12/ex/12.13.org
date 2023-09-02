@@ -1,0 +1,14 @@
+* Question:
+Exercise 12.13: What happens if we execute the following code?
+#+begin_src cpp
+  auto sp = make_shared<int>();
+  auto p = sp.get();
+  delete p;
+#+end_src
+
+* Answer:
+#+begin_src cpp
+  auto sp = make_shared<int>();   
+  auto p = sp.get();
+  delete p;                       // the sp will be dangling shared_ptr(shared_prt sp have the reference count 1 to the dymatic memory, but the memory it pointed to have been freed.)
+#+end_src

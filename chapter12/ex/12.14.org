@@ -1,0 +1,21 @@
+* Question
+Exercise 12.14: Write your own version of a function that uses a
+shared_ptr to manage a connection.
+
+* Answer:
+From the book.
+#+begin_src cpp
+  void end_connection(connection *p) { disconnect(*p); }
+
+
+  void f(destination &d /* other parameters */)
+  {
+    connection c = connect(&d);// use the connection
+    shared_ptr<connection> p(&c, end_connection);// when f exits, even if by an exception, the connection will be properly closed
+  }
+#+end_src
+
+
+
+
+

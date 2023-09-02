@@ -1,0 +1,17 @@
+* Question:
+Exercise 12.12: Using the declarations of p and sp explain each fo the
+following calls to process. If the call is legal, explain what it does. If the call
+is illegal, explain why:
+
+auto p = new int();
+auto sp = make_shared<int>();
+(a) process(sp);
+(b) process(new int());
+(c) process(p);
+(d) process(shared_ptr<int>(p));
+
+* Answer:
+(a) it's legal.
+(b) it's legal and after the process, the temporay int memory will be freed. It's  reasonable.
+(c) it's legal, but after the process, the p will be a dangling pointer.
+(d) it's legal. try to convert the type, but the type is same, it's not necessary.
