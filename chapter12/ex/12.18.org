@@ -1,0 +1,5 @@
+* Question:
+Exercise 12.18: Why doesn’t shared_ptr have a release member?
+
+* Answer:
+shared_ptr doesn't need the ownership of transfer, all the shared_ptr pointed the same dynamic memory(not strict) has the reference count to control the free process, so it's not necessary to have release member.

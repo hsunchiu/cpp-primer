@@ -1,0 +1,22 @@
+* Question:
+Exercise 12.17: Which of the following unique_ptr declarations are illegal
+or likely to result in subsequent program error? Explain what the problem is
+with each one.
+
+int ix = 1024, *pi = &ix, *pi2 = new int(2048);
+typedef unique_ptr<int> IntP;
+(a) IntP p0(ix);
+(b) IntP p1(pi);
+(c) IntP p2(pi2);
+(d) IntP p3(&ix);
+(e) IntP p4(new int(2048));
+(f) IntP p5(p2.get());
+
+* Answer:
+(a) IntP p0(ix); // it's not legal, can't convert a int to unique_ptr
+(b) IntP p1(p1); // legal, but will raise runtime error, ix is not a dynamic memory.
+(c) IntP p2(pi2); // legal
+(d) IntP p3(&ix); // just like (b), legal, but will raise runtime error.
+(e) IntP p4(new int(2048)); // legal
+(f) IntP p5(p2.get()); // legal, maybe have problem, in GNU STL, the member function `get()` exists. I am not sure the other implementations have or not. In the chapter12, the book doesn't specify the member function `get()` in unique_ptr<T>.
+
