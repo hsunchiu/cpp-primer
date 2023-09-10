@@ -1,0 +1,7 @@
+* Question:
+Exercise 13.15: Assume numbered has a copy constructor that generates a
+new serial number. Does that change the output of the calls in the previous
+exercise? If so, why? What output gets generated?
+
+* Answer:
+Will change. when use `=` and call `f`, we will call constructor.

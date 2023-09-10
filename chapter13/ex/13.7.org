@@ -1,0 +1,7 @@
+* Question:
+Exercise 13.7: What happens when we assign one StrBlob to another?
+What about StrBlobPtrs?
+
+* Answer:
+StrBlob: deep copy.
+StrBlobPtrs: shallow copy.

@@ -1,0 +1,10 @@
+* Question:
+Exercise 13.6: What is a copy-assignment operator? When is this operator
+used? What does the synthesized copy-assignment operator do? When is it
+synthesized?
+
+* Answer:
+1. `copy-assignment operator`, For class, we `=` to assign the rvalue to lvalue. the `=`, we call it copy-assignment operator.
+   The copy-assignment operator takes an argument of the same type as the class.it assigns each nonstatic member of the right-hand object to the corresponding member of the left-hand object using the copy-assignment operator for the type of that member. Array members are assigned by assigning each element of the array. The synthesized copy-assignment operator returns a reference to its left-hand object. the compiler generates a synthesized copy-assignment operator for a class if the class does not define its own.
+
+

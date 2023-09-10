@@ -1,0 +1,28 @@
+* Question:
+Exercise 13.4: Assuming Point is a class type with a public copy
+constructor, identify each use of the copy constructor in this program
+fragment:
+#+begin_src cpp
+  Point global;
+  Point foo_bar(Point arg)
+  {
+    Point local = arg, *heap = new Point(global);
+    *heap = local;
+    Point pa[ 4 ] = { local, *heap };
+    return *heap;
+  }
+#+end_src
+
+
+* Answer:
+#+begin_src cpp
+  Point global;
+  Point foo_bar(Point arg)        // parameter copy
+  {
+    Point local = arg, *heap = new Point(global); // local= arg,   Point(global)
+    ,*heap = local;                                // dereference will access the object, and use the copy constructor 
+    Point pa[ 4 ] = { local, *heap };             // copy temporary object in the array, I think will use
+    return *heap;                                 // return will use the copy contructor
+  }
+#+end_src
+

@@ -1,0 +1,7 @@
+* Question:
+Exercise 13.3: What happens when we copy a StrBlob? What about
+StrBlobPtrs?
+
+* Answer:
+When copy the StrBlob, underlying data will be created and copy.（deep copy）
+When copy the StrBlobPtrs, only the member of the class will copy.（shallow copy）

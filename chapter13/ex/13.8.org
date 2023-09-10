@@ -1,0 +1,20 @@
+* Question:
+Exercise 13.8: Write the assignment operator for the HasPtr class from
+exercise 13.5 in § 13.1.1 (p. 499). As with the copy constructor, your
+assignment operator should copy the object to which ps points.
+
+* Answer:
+#+begin_src cpp
+  class HasPtr {
+  public:
+    HasPtr(const std::string &s = std::string()): ps(new std::string(s)), i(0) { }
+    HasPtr& operator=(HasPtr &lhs){
+      this.ps = new std::string(*lhs.ps);
+      this.i = lhs.i;
+      return *this;
+    }
+  private:
+    std::string *ps;
+    int i;
+  };
+#+end_src

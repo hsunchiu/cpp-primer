@@ -1,0 +1,8 @@
+* Question:
+Exercise 13.24: What would happen if the version of HasPtr in this section
+didn’t define a destructor? What if HasPtr didn’t define the copy
+constructor?
+
+* Answer:
+If we doesn't define a destructor, will cause a memory leak.
+If we doesn't define a copy constructor, default copy constructor will be created by compiler, if we use some function with parameter with some object, the underlying object will be freed for two time, it will cause some disaster.

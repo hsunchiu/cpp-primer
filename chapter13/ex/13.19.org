@@ -1,0 +1,9 @@
+* Question:
+Exercise 13.19: Does your Employee class need to define its own versions
+of the copy-control members? If so, why? If not, why not? Implement
+whatever copy-control members you think Employee needs.
+
+* Answer:
+It's depended on how you define `=`, if it is same object for `=`, I think it's not necessary to define versions of the
+copy-control members. if `=` is strict equal, donating the same object, the synthesized copy control members are enough.
+At the same time, I'm a lazy man,I don't want to write these codes ^-^ -:).

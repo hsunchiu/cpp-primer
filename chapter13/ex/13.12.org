@@ -1,0 +1,13 @@
+* Question:
+Exercise 13.12: How many destructor calls occur in the following code
+fragment?
+#+begin_src cpp
+  bool fcn(const Sales_data *trans, Sales_data accum)
+  {
+    Sales_data item1(*trans), item2(accum);
+    return item1.isbn() != item2.isbn();
+  }
+#+end_src
+
+* Answer:
+tree times, item1, item2, accum, they will exit local scope.
