@@ -1,0 +1,7 @@
+* Question:
+Exercise 13.29: Explain why the calls to swap inside swap(HasPtr&,
+HasPtr&) do not cause a recursion loop.
+
+* Answer:
+the swap inside swap(HasPtr&, HasPtr&) and swap(HasPtr&, HasPtr&) have different function signature.So, it can't cause a recursion loop.
+

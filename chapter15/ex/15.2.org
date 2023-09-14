@@ -1,0 +1,7 @@
+* Question:
+Exercise 15.2: How does the protected access specifier differ from
+private?
+
+* Answer:
+private: In a derived class inherit from base class, the member function can't access the private member data.
+protected: In a derived class inherit from base class, the member function can access the protected member.

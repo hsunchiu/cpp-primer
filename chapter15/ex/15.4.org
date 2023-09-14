@@ -1,0 +1,12 @@
+* Question:
+Exercise 15.4: Which of the following declarations, if any, are incorrect?
+Explain why.
+class Base { ... };
+(a) class Derived : public Derived { ... };
+(b) class Derived : private Base { ... };
+(c) class Derived : public Base;
+
+* Answer:
+(a) correct
+(b) correct
+(c) incorrect, a declaration can't contain the inherit class.

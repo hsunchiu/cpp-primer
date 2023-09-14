@@ -1,0 +1,5 @@
+* Question:
+Exercise 15.1: What is a virtual member?
+
+* Answer:
+In a class, we use keyword `virtual` to specify the member function, we call the member function is a virtual member. 
