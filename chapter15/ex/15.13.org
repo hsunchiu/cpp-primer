@@ -1,0 +1,40 @@
+* Question:
+Exercise 15.13: Given the following classes, explain each print function:
+#+begin_src cpp
+  class base {
+  public:
+    string name() { return basename; }
+    virtual void print(ostream &os) { os << basename; }
+  private:
+    string basename;
+  };
+  class derived : public base {
+  public:
+    void print(ostream &os) { print(os); os << " " << i; }
+  private:
+   int i;
+  };
+#+end_src
+
+* Answer:
+For derived class, in the print(), he call will be resolved at run time as a call to the
+derived version itself, resulting in an infinite recursion.
+
+Fix: add the scope
+#+begin_src cpp
+  class base{
+  public:
+    string name() {return basename;}
+    virtual void print(ostream &os) {os << basename;}
+  private:
+    string basename;
+  };
+
+  class derived : public base {
+  public:
+    void print(ostream &os) { base::print(os); os << " " << i;}
+  private:
+    int i;
+  };
+#+end_src
+

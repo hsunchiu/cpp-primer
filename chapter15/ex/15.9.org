@@ -1,0 +1,11 @@
+* Question:
+Exercise 15.9: When is it possible for an expression’s static type to differ
+from its dynamic type? Give three examples in which the static and dynamic
+type differ.
+
+* Answer:
+A pointer or reference to a base-class type can refer to an to object of derived type. In such cases the static type is reference (or pointer) to base, but the dynamic type is reference (or pointer) to derived.
+
+Anything like this can be an example.
+
+

@@ -1,0 +1,7 @@
+* Question:
+Exercise 15.12: Is it ever useful to declare a member function as both
+override and final? Why or why not?
+
+* Answer:
+I think is useful to declare a member function as both override and final, if the derived class is the last class which could be
+inherited. At the same time, override key word will let the compile check weather the implementation is derived correctly, In that scene, we can think less.

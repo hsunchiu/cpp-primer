@@ -1,0 +1,6 @@
+* Question:
+Exercise 15.8: Define static type and dynamic type.
+
+* Answer:
+- static type: Type with which a variable is defined or that an expression yields. Static type is known at compile time.
+- dynamic type: Type of an object at run time. The dynamic type of an object to which a reference refers or to which a pointer points may differ from the static type of the reference or pointer.

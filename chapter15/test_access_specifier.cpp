@@ -1,68 +1,53 @@
 #include <iostream>
+using namespace std;
 
 class Base {
-
-private:
-  int a = 1;
-  void Bf1(){};
+public:
+  int basePublicValue = 0;
+  void basePublicFunc() { cout << "basePublicFunc" << endl; };
 
 protected:
-  int b = 0;
-  void Bf2(){};
+  int baseProtectedValue = 0;
+  void baseProtectedFunc() { cout << "baseProtectedFunc()" << endl; };
 
-public:
-  int c = 0;
-  void Bf3(){};
+private:
+  int basePrivateValue = 0;
+  void basePrivateFunc() { cout << "basePrivateFunc()" << endl; };
 };
 
 class PublicDerived : public Base {
+  friend void TryPublicDerivedFriendship(Base &base,
+                                         PublicDerived &publicderived) {
+    // PublicDerived is not friend of Base, so the friend can only access the
+    // public members
+    base.basePublicValue;
+    base.basePublicFunc();
+
+    // more, freind function can access the friend's protected and public
+    // members
+    publicderived.publicDerivedProtectedFunc();
+    publicderived.publicDerivedProtectedValue;
+    publicderived.publicDerivedPublicFunc();
+    publicderived.publicDerivedPublicValue;
+  };
+
 public:
-  void f1() {
-    c; // we can access protected member
-    b; // we can access publice member
-    // a; // compile error. declared private member
-    // Bf1(); // compile error. declared private member
-    Bf2();
-    Bf3();
+  int publicDerivedPublicValue = 0;
+  void publicDerivedPublicFunc() {
+    cout << "publicDerivedPublicFunc()" << endl;
+  }
 
-    // float(a); // maybe a bad smell, is `a` float or convert the a to float,
-    // in clang, declare variable a with float type.
+protected:
+  int publicDerivedProtectedValue = 0;
+  void publicDerivedProtectedFunc() {
+    cout << "publicDerivedProtectedFunc()" << endl;
+  }
 
-    float(a); // declaration a a with float
-    std::cout << float(a) << std::endl;
-
-    // Base::Bf1();
-    Base::Bf2();
-    Base::Bf3();
+private:
+  int privateDerivedPrivateValue = 0;
+  void privateDerivedPrivateFunc() {
+    cout << "privateDerivedPrivateFunc()" << endl;
   }
 };
 
-class ProtectedDerived : protected Base {
-public:
-  void f1() {
-    c;
-    b;
-    // a;
-
-    // Bf1();
-    Bf2();
-    Bf3();
-  }
-};
-
-class PrivateDerived : private Base {
-  void f1() {
-    // a;
-    b;
-    c;
-
-    // Bf1();
-    Bf2();
-    Bf3();
-  }
-};
-
-int main() {
-  PublicDerived a;
-  a.f1();
-}
+class PrivateDerived : private Base {};
