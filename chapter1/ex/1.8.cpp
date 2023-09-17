@@ -1,10 +1,8 @@
 #include <iostream>
 
-int main()
-{
+int main() {
   std::cout << "/*";
   std::cout << "*/";
-  std::cout << /* "*/" */ "; // mismatch the " and add the ";
-  std::cout << /* "*/" /* "/*" */;
-
+  std::cout << /* "*/ " */ "; // mismatch the " and add the ";
+  std::cout << /* "*/ " /* " /*" */;
 }

@@ -1,7 +1,11 @@
+/*
+  Exercise 1.5: We wrote the output in one large statement. Rewrite the program
+  to use a separate statement to print each operand.
+ */
+
 #include <iostream>
 
-int main()
-{
+int main() {
   std::cout << "Enter two numbers:";
   std::cout << std::endl;
   int v1 = 0, v2 = 0;
@@ -16,5 +20,4 @@ int main()
   std::cout << std::endl;
 
   return 0;
-
 }

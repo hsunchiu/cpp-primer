@@ -1,0 +1,13 @@
+* Question:
+Exercise 1.8: Indicate which, if any, of the following output statements are legal:
+#+begin_src cpp
+  std::cout << "/*";
+  std::cout << "*/";
+  std::cout << /* "*/" */;
+  std::cout << /* "*/" /* "/*" */;
+#+end_src
+After you’ve predicted what will happen, test your answers by compiling a program with each of these statements. Correct any errors you encounter.
+
+* Answer:
+the 3 and 4 line contain nested comment pair which causes syntax error.
+please refer to 1.8.cpp.

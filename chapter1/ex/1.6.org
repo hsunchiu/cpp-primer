@@ -1,0 +1,17 @@
+* Question:
+Exercise 1.6: Explain whether the following program fragment is legal.
+#+begin_src cpp
+  std::cout << "The sum of " << v1;
+  << " and " << v2;
+  << " is " << v1 + v2 << std::endl;
+#+end_src
+If the program is legal, what does it do? If the program is not legal, why not? How would you fix it?
+* Answer:
+Not legal, in C++, an express with the end of `;` is a statement, there are three statements in the code. but `<< "and " << v2` can't be evalated.
+we can correct the code like this:
+#+begin_src cpp
+  std::cout << "The sum of " << v1
+  << " and " << v2
+  << " is " << v1 + v2 << std::endl;
+#+end_src
+the C++ compile will consider the code a statement even if the code is separated by three line. 
