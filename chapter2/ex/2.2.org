@@ -1,9 +1,10 @@
-* To calculate a mortgage payment, what types would you use for the rate, principal, and payment? Explain why you selected each type.
+* Question:
+To calculate a mortgage payment, what types would you use for the rate, principal, and payment? Explain why you selected each type.
 I think double or float
-
-- The rate most like that: 4.50 % per year.
-- The principal most like that: $854.36
-- The payment most like that: $1,142.36
+* Answer:
+1. The rate most like that: 4.50 % per year.
+2. The principal most like that: $854.36
+3. The payment most like that: $1,142.36
 
 
 

@@ -1,0 +1,24 @@
+* Question:
+Exercise 2.9: Explain the following definitions. For those that are illegal,
+explain what’s wrong and how to correct it.
+(a) std::cin >> int input_value;
+(b) int i = { 3.14 };
+(c) double salary = wage = 9999.99;
+(d) int i = 3.14;
+
+* Answer:
+(a) before using a variable, we must define it. correct:
+#+begin_src cpp
+  int input_value;
+  std::cin >> input_value;
+#+end_src
+(b) narrowing conversion in list initialization.(error, not warning) error: narrowing conversion required
+#+begin_src cpp
+  int i = {int(3.14)};
+#+end_src
+(c) `wage` is not defined.
+#+begin_src cpp
+  double wage;
+  double salary = wage = 999.99;
+#+end_src
+(d) correct, but have the type conversion.

@@ -1,0 +1,14 @@
+* Question:
+Exercise 2.16: Which, if any, of the following assignments are invalid? If
+they are valid, explain what they do.
+int i = 0, &r1 = i; double d = 0, &r2 = d;
+(a) r2 = 3.14159;
+(b) r2 = r1;
+(c) i = r2;
+(d) r1 = d;
+
+* Question:
+(a) valid, assigns 3.14159 to which r2 refers, i.e.. to d
+(b) valid, assigns i to d, type conversion occurs.
+(c) valid, assigns d to i, type conversion occurs.
+(d) valid, assigns d to i, type conversion occurs.

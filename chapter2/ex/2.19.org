@@ -1,0 +1,53 @@
+* Question:
+Exercise 2.19: Explain the key differences between pointers and references.
+
+* Answer:
+reference must bind a object when initialized, pointer doesn't have.
+I run some code in godbolt.org.
+#+begin_src cpp
+  int main(){
+      int i, a, b;
+      int *p = &i;
+      int &r = i;
+
+      // just for finding the loction in assembly code.
+      a = 10;
+      b = 20;
+  }
+#+end_src
+
+generated x86-64 assembly code:
+#+begin_src assembly
+main:
+        push    rbp
+        mov     rbp, rsp
+        lea     rax, [rbp-28]             # load the address of i
+        mov     QWORD PTR [rbp-8], rax    # assign the address of i to p
+        lea     rax, [rbp-28]             # load the address of i
+        mov     QWORD PTR [rbp-16], rax   # assign the address of i to the maybe fake r 
+        mov     DWORD PTR [rbp-20], 10    # a = 10
+        mov     DWORD PTR [rbp-24], 20    # b = 20
+        mov     eax, 0
+        pop     rbp
+        ret
+#+end_src
+
+So, in the implementation, reference type and pointer is the same thing, but reference is a syntax sugar for pointer.
+For example,when we swap two value.
+Pointer version
+#+begin_src cpp
+  void swap(int *v1, int *v2){
+    int tmp = *v1;
+    ,*v1 =* v2;
+    ,*v2 = tmp;
+  }
+#+end_src
+Reference version
+#+begin_src cpp
+  void swap(int &v1, int &v2){
+    int tmp = v1;
+    v1 = v2;
+    v2 = tmp;
+  }
+#+end_src
+They will get the same assembly code.

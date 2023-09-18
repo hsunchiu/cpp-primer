@@ -1,0 +1,11 @@
+* Question:
+Exercise 2.20: What does the following program do?
+#+begin_src cpp
+  int i = 42;
+  int *p1 = &i;
+  ,*p1 = *p1 * *p1;
+#+end_src
+
+* Answer:
+square i (in some language, i^2)and store the result to i.
+
