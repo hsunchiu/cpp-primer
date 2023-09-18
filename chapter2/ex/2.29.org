@@ -1,0 +1,20 @@
+* Question:
+Exercise 2.29: Uing the variables in the previous exercise, which of the
+following assignments are legal? Explain why.
+(a) i = ic;
+(b) p1 = p3;
+(c) p1 = &ic;
+(d) p3 = &ic;
+(e) p2 = p1;
+(f) ic = *p3;
+
+* Answer:
+Note: i is an int, ic is a const int, p1 is a pointer points to const, p2 is a const pointer points to noncosnt
+p3 is a const pointer points to const
+(a) legal, assign a const to a nonconst
+(b) legal. p1 is noncast so it's assignable, p1 and p3 are pointer points to const.
+(c) legal, p1 points to a const
+(d) illegal, can't assign, because p3 is a const pointer.
+(e) illegal, p2 is a const point and points to nonconst , but p1 points to const
+(f) ic is a const, can't assign.
+

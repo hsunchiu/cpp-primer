@@ -1,0 +1,8 @@
+* Question:
+Exercise 2.22: Assuming p is a pointer to int, explain the following code:
+if (p) // ...
+if (*p)  //...
+
+* Answer:
+`if (p)`: if the p is a nullptr, skip, else do something.
+`if (*p)`: if the object the pointer p point to is not zero, do something, otherwise, skip.

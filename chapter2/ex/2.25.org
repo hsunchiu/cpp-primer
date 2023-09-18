@@ -1,0 +1,10 @@
+* Question:
+Exercise 2.25: Determine the types and values of each of the following
+variables.
+(a) int* ip, &r = ip;
+(b) int i, ,*ip = 0;
+(c) int* ip, ip2;
+* Answer:
+(a) ip is a pointer points to an int, r is a int reference binds to ip(need to check compiled or not), the answer is can't pass the compile process.
+(b) i is an int, ip is a null pointer.
+(c) ip and ip2 are pointers point to int.

@@ -1,0 +1,11 @@
+* Question:
+Exercise 2.21: Explain each of the following definitions. Indicate whether any are illegal and, if so, why.
+int i = 0;
+(a) double* dp = &i;
+(b) int *ip = i;
+(c) int *p = &i;
+
+* Answer:
+(a) illegal, can't assign an address of int to a pointer to double
+(b) illegal, can't assign a variable to a pointer, even if the variable is zero
+(c) legal.
