@@ -1,0 +1,20 @@
+* Question:
+Exercise 2.36: In the following code, determine the type of each variable
+and the value each variable has when the code finishes:
+int a = 3, b = 4;
+decltype(a) c = a;
+decltype((b)) d = a;
+++c;
+++d;
+
+* Answer:
+a is an int
+b is an int
+c is an int
+d is a reference to a
+
+the result when the code finished;
+a = 4, b = 4, c = 3, d = 4
+
+
+

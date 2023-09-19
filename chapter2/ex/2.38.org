@@ -1,0 +1,19 @@
+* Question:
+Exercise 2.38: Describe the differences in type deduction between
+decltype and auto. Give an example of an expression where auto and
+decltype will deduce the same type and an example where they will deduce
+differing types.
+
+* Answer:
+auto will losing the top level information of type, decltype will not. decltype will keep the reference type and const.
+For example:
+#+begin_src cpp
+  const int ci = 0, &cri = ci;
+
+  auto a = ci;                    // a is an int
+  decltype(ci) b = 100;           // b is an const int
+
+  auto c = cri;                   // c is an int
+  decltype(cri) d = ci            // d is a reference to const int
+#+end_src
+

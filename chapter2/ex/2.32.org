@@ -1,0 +1,12 @@
+* Question:
+Exercise 2.32: Is the following code legal or not? If not, how might you
+make it legal?
+#+begin_src cpp
+  int null = 0, *p = null;
+#+end_src
+
+* Answer:
+illegal. the pointer can't use int to initialize. We can use nullptr from C++ 11
+#+begin_src cpp
+  int null = 0, *p = nullptr;
+#+end_src

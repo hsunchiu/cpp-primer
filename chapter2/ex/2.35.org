@@ -1,0 +1,13 @@
+* Question:
+Exercise 2.35: Determine the types deduced in each of the following
+definitions. Once you’ve figured out the types, write a program to see
+whether you were correct.
+#+begin_src cpp
+  const int i = 42;
+  auto j = i; const auto &k = i; auto *p = &i;
+  const auto j2 = i, &k2 = i;
+#+end_src
+
+* Answer:
+j is int, k is a const int reference. p is a pointer to const int
+j2 is const int, k2 is a const int reference for i

@@ -1,0 +1,15 @@
+* Question:
+Exercise 2.31: Given the declarations in the previous exercise determine
+whether the following assignments are legal. Explain how the top-level or
+low-level const applies in each case.
+
+r1 = v2;
+p1 = p2;    p2 = p1;
+p1 = p3;    p2 = p3;
+
+* Answer:
+r1 = v2; //legal, assign const int v2 to r1(v1)
+p1 = p2; //illegal, can't convert low level const pointer to nonconst
+p2 = p1; //legal, converting low level nonconst  to const is legal
+p1 = p3; //illegal, can't convert low level const pointer to noconst
+p2 = p3; //legal, converting low level nonconst to const is legal
