@@ -1,0 +1,14 @@
+* Question:
+Exercise 2.39: Compile the following program to see what happens when
+you forget the semicolon after a class definition. Remember the message for
+future reference.
+#+begin_src cpp
+  struct Foo { /* empty    */ } // Note: no semicolon
+  int main()
+  {
+    return 0;
+  }
+#+end_src
+
+* Answer:
+the compiler arise the error: expect ";" after struct.
