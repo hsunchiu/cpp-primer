@@ -1,0 +1,6 @@
+* Question:
+Exercise 3.33: What would happen if we did not initialize the scores array
+in the program on page 116?
+
+* Answer:
+Because scores is a local variable, the value in the array is random, so the result doesn't grow from zero, we will get the wrong result.

@@ -1,0 +1,23 @@
+* Question:
+Exercise 3.30: Identify the indexing errors in the following code:
+#+begin_src cpp
+  constexpr size_t array_size = 10;
+  int ia[array_size];
+  for (size_t ix = 1; ix <= array_size; ++ix)
+      ia[ix] = ix;
+#+end_src
+
+* Answer:
+#+begin_src cpp
+  constexpr size_t array_size = 10;
+  int ia[array_size];
+  for (size_t ix = 1; ix <= array_size; ++ix) // from zero and over the index of arry
+    ia[ix] = ix;
+#+end_src
+fix it:
+#+begin_src cpp
+  constexpr size_t array_size = 10;
+  int ia[array_size];
+  for (size_t ix = 0; ix != array_size; ++ix)
+    ia[ix] = ix;
+#+end_src

@@ -1,0 +1,5 @@
+* Question:
+Exercise 3.29: List some of the drawbacks of using an array instead of a vector.
+
+* Answer:
+using an array have no dymatic size, can't grow and shrink.

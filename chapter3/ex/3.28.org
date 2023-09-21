@@ -1,0 +1,17 @@
+* Question:
+Exercise 3.28: What are the values in the following arrays?
+#+begin_src cpp
+  string sa[10];
+  string ia[10];
+
+  int main(){
+    string sa2[10];
+    int ia2[10];
+  }
+#+end_src
+
+* Answer:
+sa has 10 empty string.(call default constructor)
+ia has 10 zero.(global variable have zero value)
+sa2 has 10 empty string.(call default constructor)
+is2 has random int number.
