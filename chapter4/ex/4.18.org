@@ -1,0 +1,11 @@
+* Question:
+Exercise 4.18: What would happen if the while loop on page 148 that prints the elements from a vector used the prefix increment operator?
+
+* Answer:
+#+begin_src cpp
+  auto pbeg = v.begin();
+  while (pbeg != v.end() && *beg >= 0)
+    cout<<*pbeg++<<endl;
+#+end_src
+
+It will skip the first element, and access the off-the-end element(overflow).

@@ -1,0 +1,10 @@
+* Question:
+Exercise 4.12: Assuming i, j, and k are all ints, explain what i != j < k means.
+
+* Answer:
+i != (j < k)
+
+compare j < k , return bool
+the compare int i with the return bool type. as if i is not 1 or 0, the result is alway false.
+
+

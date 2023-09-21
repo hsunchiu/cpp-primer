@@ -1,0 +1,10 @@
+* Question:
+Exercise 4.9: Explain the behavior of the condition in the following if:
+#+begin_src cpp
+  const char *cp = "Hello World";
+  if (cp && *cp)
+#+end_src
+
+* Answer:
+test cp is not a null pointer and at the same time first charactet of "Hello World" is not null-terminated, do something.(have short-circuit evaluation).
+

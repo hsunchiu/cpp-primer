@@ -1,0 +1,8 @@
+* Question:
+Exercise 4.8: Explain when operands are evaluated in the logical AND, logical
+OR, and equality operators.
+
+* Answer:
+when two conditions are all true, we use logical AND.(caution: short-circuit evaluation)
+when one of conditions is true, we use logical OR.(caution: short-circuit evaluation)
+when A is equal B, we use equality.

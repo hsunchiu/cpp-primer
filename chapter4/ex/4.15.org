@@ -1,0 +1,6 @@
+* Question:
+Exercise 4.15: The following assignment is illegal. Why? How would you correct it?
+double dval; int ival; int *pi; dval = ival = pi = 0;
+
+* Answer:
+illegal, `pi = 0` is legal, but for `ival`, can't convert `int*` to `int`.

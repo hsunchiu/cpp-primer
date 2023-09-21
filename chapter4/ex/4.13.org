@@ -1,0 +1,9 @@
+* Question:
+Exercise 4.13: What are the values of i and d after each assignment?
+int i; double d;
+(1) d = i = 3.5;
+(2) i = d = 3.5;
+
+* Answer:
+(1) d = 3.0 i = 3
+(2) i = 3  d = 3.5

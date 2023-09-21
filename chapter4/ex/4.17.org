@@ -1,0 +1,6 @@
+* Question:
+Exercise 4.17: Explain the difference between prefix and postfix increment.
+
+* Answer:
+prefix return a lvalve (an object)
+postfix return a copy of the variable, if we have operator on posfix increment, the oprator is on unincrement one.

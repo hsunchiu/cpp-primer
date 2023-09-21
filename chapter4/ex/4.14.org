@@ -1,0 +1,10 @@
+* Question:
+Exercise 4.14: Explain what happens in each of the if tests:
+if(42=i)
+// ...
+if(i=42)
+// ...
+
+* Answer:
+for `if(42=i)`, the compiler will produce a error information.
+for `if(i = 42)`, the expression will pass the compile, but will evaluated as true. because i = 42 and converted to bool `true`, because of nonzero.
