@@ -1,0 +1,12 @@
+* Question:
+Exercise 3.11: Is the following range for legal? If so, what is the type of
+c?
+#+begin_src cpp
+  const string s = "Keep out!";
+  for (auto &c : s) { /* ...  */ }
+#+end_src
+
+* Answer:
+It depends on the operation on c, if we write the c, the compile will produce a error, if just read them, it's legal.
+the c 's type is const char& ( a const char reference)
+

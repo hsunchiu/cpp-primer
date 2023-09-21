@@ -1,1 +1,7 @@
-# SKIP
+* Question:
+Exercise 3.3: Explain how whitespace characters are handled in the string
+input operator and in the getline function.
+
+* Answer:
+in string input operator, whitespace will be treated as the separator for a word.
+in getline function, whitespace will be treated as a part of a line.

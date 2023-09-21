@@ -1,0 +1,15 @@
+* Question:
+Exercise 3.18: Is the following program legal? If not, how might you fix it?
+
+#+begin_src cpp
+  vector<int> ivec;
+  ivec[0] = 42;
+#+end_src
+
+* Answer:
+buffer overflow, fix it:
+#+begin_src cpp
+  vector<int> ivec;
+  ivec.push_back(43);
+#+end_src
+
