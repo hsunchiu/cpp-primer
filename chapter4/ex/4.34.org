@@ -1,0 +1,13 @@
+* Exercise 4.34: Given the variable definitions in this section, explain what
+conversions take place in the following expressions:
+#+begin_src cpp
+(a) if (fval)
+(b) dval = fval + ival;
+(c) dval + ival * cval;
+#+end_src
+Remember that you may need to consider the associativity of the operators.
+
+* Answer:
+(a) fval converted to bool, if fval is not 0.0, converted to true
+(b) fval + ival, ival converted to float and the value of expression on the right hand `float` converted to double and assigned to dval
+(c) cval promoted to int and the result is promoted to double, finally, dval add the result of the double(ival * cval)

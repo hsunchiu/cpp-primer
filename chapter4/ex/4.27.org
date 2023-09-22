@@ -1,0 +1,14 @@
+* Question:
+Exercise 4.27: What is the result of each of these expressions?
+unsigned long ul1 = 3, ul2 = 7;
+(a) ul1 & ul2
+(b) ul1 | ul2
+(c) ul1 && ul2
+(d) ul1 || ul2
+
+* Answer:
+Note: 3 = b'011' 7 = b'111'
+(a) 3
+(b) 7
+(c) true
+(d) true

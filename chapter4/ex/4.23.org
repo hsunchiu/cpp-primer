@@ -1,0 +1,16 @@
+* Question:
+Exercise 4.23: The following expression fails to compile due to operator
+precedence. Using Table 4.12 (p. 166), explain why it fails. How would you
+fix it?
+#+begin_src cpp
+  string s = "word";
+  string pl = s + s[s.size() - 1] == 's' ? "" : "s" ;
+#+end_src
+
+* Answer:
+conditional expression have low precedence, so the line`string pl = s + s[s.size() -1] == 's' ? "" : "s"` equivalent to
+`pl = (s + s[s.size() -1]) == 's'? "" :"s"`, the pl will always get empty string.
+fix it with parenthesizing.
+#+begin_src cpp
+  string pl = s + ((s[s.size() - 1]) == 's' ? "" : "s")
+#+end_src

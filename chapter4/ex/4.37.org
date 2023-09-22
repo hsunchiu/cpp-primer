@@ -1,0 +1,14 @@
+* Question:
+Exercise 4.37: Rewrite each of the following old-style casts to use a named
+cast:
+int i; double d; cons string* ps ;  char* pc; void* pv;
+(a) pv = (void*)ps;
+(b) i = int(*pc);
+(c) pv = &d;
+(d) pc = (char*) pv;
+
+* Answer:
+(a) pv = static_cast<void*>(ps);
+(b) i = static_cast<char>(*pc);
+(c) pv = static_cast<void*>(&d);
+(d) pc = static_cast<char*>(pv);

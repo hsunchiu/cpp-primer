@@ -1,0 +1,20 @@
+* Question:
+Exercise 4.20: Assuming that iter is a vector<string>::iterator,
+indicate which, if any, of the following expressions are legal. Explain the
+behavior of the legal expressions and why those that aren’t legal are in error.
+#+begin_src cpp
+(a) *iter++;
+(b) (*iter)++;
+(c) *iter.empty()
+(d) iter->empty();
+(e) ++*iter;
+(f) iter++->empty();
+#+end_src
+
+* Answer:
+(a) legal, increment iter, and fetch the unincremented copy.
+(b) legal, dereference the iter and return the copy with one added.
+(c) illegal, dereference has a lower precedence than dot, error: iter is a pointer(or pointer-liked) and has no member named size.
+(d) legal, run empty of the object iter points to
+(e) legal, increment iter, and access the incremented object.
+(f) legal, iter increment get the copy, and access the origin one points to object 's empty.

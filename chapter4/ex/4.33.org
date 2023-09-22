@@ -1,0 +1,8 @@
+* Question:
+Exercise 4.33: Using Table 4.12 (p. 166) explain what the following
+expression does:
+#+begin_src cpp
+  someValue ? ++x, ++y : --x, --y
+#+end_src
+comma have the lowest precedence. conditional is higher the comma.So
+if someValue is true, we plus one to x and y, else substrate one to x and y.

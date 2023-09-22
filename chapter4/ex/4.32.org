@@ -1,0 +1,12 @@
+* Question:
+Exercise 4.32: Explain the following loop.
+#+begin_src cpp
+  constexpr int size = 5;
+  int ia[size] = {1,2,3,4,5};
+  for (int *ptr = ia, ix = 0;
+       ix != size && ptr != ia+size;
+       ++ix, ++ptr)  { /* ...*/ }
+#+end_src
+
+* Answer:
+iterate the ia, get the ptr and index. if the ix and ptr are not out of the range of the ia, do something.
