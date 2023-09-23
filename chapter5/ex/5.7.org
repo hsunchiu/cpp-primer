@@ -1,0 +1,44 @@
+* Qustion:
+Exercise 5.7: Correct the errors in each of the following code fragments:
+(a) if (ival1 != ival2) ival1 = ival2
+else ival1 = ival2 = 0;
+(b) if (ival < minval) minval = ival;
+occurs = 1;
+(c) if (int ival = get_value())
+cout << "ival = " << ival << endl;
+if (!ival)
+cout << "ival = 0\n";
+(d) if (ival = 0)
+ival = get_value();
+
+* Question:
+(a) except a semicolon. Fix it:
+#+begin_src cpp
+  if(ival1 != ival2)
+    ival1 = ival2;
+  else
+    ival1 = ival2 = 0;
+#+end_src
+
+(b) expect a block sign. Fix it:
+#+begin_src cpp
+  if (ival < minval){
+        minval = ival;
+        occurs = 1;
+  }
+#+end_src
+
+(c) `ival` is out of scope at the `else` part. Fix it:
+#+begin_src cpp
+  int ival = 0;
+  if (ival = getvalue())
+    cout << "ival = " << ival << endl;
+  if(!ival)
+    cout << "ival = 0\n";
+#+end_src
+
+(d) I think except `==` in if statement.
+#+begin_src cpp
+  if (ival == 0)
+    ival = get_value();
+#+end_src

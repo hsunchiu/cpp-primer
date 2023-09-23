@@ -1,0 +1,24 @@
+* Question:
+The last example in this section that jumped back to begin could be better written using a loop. Rewrite the code to eliminate the goto
+
+* Answer:
+#+begin_src cpp
+// backward jump over an initialized variable definition is OK
+begin:
+	int sz = get_size();
+	if(sz <= 0){
+		goto begin;
+	}
+#+end_src
+
+use `while` to repalce `goto`
+
+#+begin_src cpp
+    while(int sz = get_size()){
+        if(sz <= 0){
+            break;
+        }
+    }
+#+end_src
+
+

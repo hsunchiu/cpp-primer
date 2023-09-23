@@ -1,0 +1,15 @@
+* Question:
+Exercise 5.1: What is a null statement? When might you use a null
+statement?
+
+* Answer:
+A null statement is a single semicolon:
+#+begin_src cpp
+  ; //null statement
+#+end_src
+A null statement is useful where the language requires a statement but the program’s logic does not.Such usage is most common when a loop’s work can be done within its condition. For example, we might want to read an input stream, ignoring everything we read until we encounter a particular value:
+#+begin_src cpp
+  // read until we hit end-of-file or find an input equal to sought
+  while (cin >> s && s != sought)
+    ; // null statement
+#+end_src

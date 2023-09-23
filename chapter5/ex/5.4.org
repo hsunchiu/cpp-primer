@@ -1,0 +1,16 @@
+* Question:
+Exercise 5.4: Explain each of the following examples, and correct any
+problems you detect.
+(a) while (string::iterator iter != s.end()) {/ ** /}
+(b) while (bool status = find(word)) { / * *  /}
+if (!status) {/* * /}
+
+* Answer:
+(a) maybe want to test whether the iterator reaches the string's end. but the iterator is not initialized. fix it:
+#+begin_src cpp
+  string:: iterator iter = s.begin();
+  while(iter != s.end()) { // do something}
+#+end_src
+
+(b) check whether could find a word, if found, do something, and continue. if not found , do another something.
+

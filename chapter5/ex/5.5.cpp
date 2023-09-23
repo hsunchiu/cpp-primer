@@ -1,43 +1,34 @@
+/*
+  Exercise 5.5: Using an if–else statement, write your own version of the
+  program to generate the letter grade from a numeric grade.
+ */
 #include <iostream>
 #include <string>
 #include <vector>
 
-using std::vector;
-using std::string;
-using std::cin;
-using std::cout;
-using std::endl;
+using namespace std;
 
-int main(int argc, char **argv)
-{
-  const vector<string> scores = {"F", "D", "E", "B", "A", "A++"};
+vector<string> scores = {"F", "D", "C", "B", "A", "A++"};
 
-  int score;
-  
-  while(cin >> score && score >= 0 && score <= 100){
-    string letterscore;
-    if(score < 60){
-      letterscore = scores[0];
-    }
-    else{
-      letterscore = scores[(score - 50)/10];
-      if(score != 100){
-	if(score % 10 > 7){
-	  letterscore += "+";
-	}
-	else if(score %10 < 3){
-	  letterscore += "-";
-	}
-      }
-    }
-    
-    cout << score << " is " << letterscore << endl;
-    letterscore = "";
+int main() {
+
+  int grade;
+  string lettergrade;
+
+  cin >> grade;
+
+  // if failing grade, no need to check for a plus or minus
+  if (grade < 60) {
+    lettergrade = scores[0];
+  } else {
+    lettergrade = scores[(grade - 50) /
+                         10]; // fetch the letter grade if (grade != 100) // add
+                              // plus or minus only if not already an A++
+    if (grade % 10 > 7)
+      lettergrade += '+'; // grades ending in 8 or 9 get a +
+    else if (grade % 10 < 3)
+      lettergrade += '-'; // grades ending in 0, 1, or 2 get a
   }
-  
 
-  return 0;
-
-
-
+  cout << lettergrade << endl;
 }

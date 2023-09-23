@@ -1,0 +1,37 @@
+* Question:
+Exercise 5.15: Explain each of the following loops. Correct any problems
+you detect.
+(a)
+#+begin_src cpp
+  for(int ix=0;ix!=sz;++ix) {/ * ... */}
+  if (ix != sz)
+  // . . .
+#+end_src
+(b)
+#+begin_src cpp
+  int ix; for(ix!=sz;++ix){/* ... */}
+#+end_src
+(c)
+#+begin_src cpp
+  for(int ix=0;ix!=sz;++ix,++sz) {/*...*/}
+#+end_src
+
+* Answer:
+(a) ix is out of the scope when the while loop end. Fix it:
+#+begin_src cpp
+  int ix = 0;
+  for (; ix!=sz; ++ix) {/**/}
+  if (ix != sz)
+#+end_src
+
+(b) lack of the `;` when absent of the init-statement.
+#+begin_src cpp
+  int ix; for(; ix != sz; ++ix){/**/}
+#+end_src
+
+(c) Maybe an infinite loop when ix and sz self add.
+#+begin_src cpp
+  for(int ix =0; ix != sz; ++ix){/**/}
+#+end_src
+
+

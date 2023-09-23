@@ -1,0 +1,48 @@
+* Question:
+Exercise 5.18: Explain each of the following loops. Correct any problems
+you detect.
+(a)
+#+begin_src cpp
+  do
+    int v1, v2;
+    cout << "Please enter two numbers to sum:" ;
+    if (cin >> v1 >> v2)
+        cout << "Sum is: " << v1 + v2 << endl;
+  while (cin);
+#+end_src
+
+(b)
+#+begin_src cpp
+  do {
+    // . . .
+  } while (int ival = get_response())
+#+end_src
+
+(c)
+#+begin_src cpp
+  do {
+     int ival = get_response();
+  } while(ival);
+#+end_src
+
+* Answer:
+(a)promt user to enter two numbers and output the result of sum of the them. Error: miss the block scope.
+#+begin_src cpp
+  do {
+    int v1, v2;
+    cout << "Please enter two numbers to sum:";
+    if (cin >> v1 >> v2){
+      cout << "Sum is: " << v1 + v2 << endl;
+    }while(0);
+  }
+#+end_src
+
+(b) Get the respsonse from some place and check the ival is valid .error: declaration in a do condition
+#+begin_src cpp
+  do {
+    int ival = get_response();
+    // ...
+   }while(ival);
+#+end_src
+
+(c) same as (b), but the statement is correct.

@@ -1,0 +1,6 @@
+* Question:
+Exercise 5.8: What is a “dangling else”? How are else clauses resolved in C++?
+
+* Answer:
+When we nest an if inside another if, it is possible that there will be more if branches than else branches. The question arises: How do we know to which if a given else belongs?
+This problem, usually referred to as a dangling else. In C++ the ambiguity is resolved by specifying that each else is matched with the closest preceding unmatched if.
