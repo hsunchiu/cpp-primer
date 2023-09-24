@@ -1,3 +1,7 @@
+/*
+  Exercise 7.13: Rewrite the program from page 255 to use the istream
+  constructor.
+ */
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
 #include <istream>
@@ -17,26 +21,26 @@ struct Sales_data {
 };
 
 // member functions.
-Sales_data &Sales_data::combine(const Sales_data &rhs) {
+inline Sales_data &Sales_data::combine(const Sales_data &rhs) {
   units_sold += rhs.units_sold;
   revenue += rhs.revenue;
   return *this;
 }
 
 // nonmember functions
-std::istream &read(std::istream &is, Sales_data &item) {
+inline std::istream &read(std::istream &is, Sales_data &item) {
   double price = 0;
   is >> item.bookNo >> item.units_sold >> price;
   item.revenue = price * item.units_sold;
   return is;
 }
 
-std::ostream &print(std::ostream &os, const Sales_data &item) {
+inline std::ostream &print(std::ostream &os, const Sales_data &item) {
   os << item.isbn() << " " << item.units_sold << " " << item.revenue;
   return os;
 }
 
-Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
+inline Sales_data add(const Sales_data &lhs, const Sales_data &rhs) {
   Sales_data sum = lhs;
   sum.combine(rhs);
   return sum;

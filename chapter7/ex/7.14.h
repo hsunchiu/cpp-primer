@@ -1,5 +1,12 @@
+/*
+  Exercise 7.14: Write a version of the default constructor that explicitly
+  initializes the members to the values we have provided as in-class
+  initializers.
+ */
+
 #ifndef SALES_DATA_H
 #define SALES_DATA_H
+
 #include <string>
 struct Sales_data {
   std::string bookNo;
@@ -11,6 +18,6 @@ struct Sales_data {
     units_sold = u;
     revenue = r;
   }
-}
+};
 
 #endif

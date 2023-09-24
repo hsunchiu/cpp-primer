@@ -1,12 +1,18 @@
-#include "7.4.h"
+/*
+  Exercise 7.9: Add operations to read and print Person objects to the code
+  you wrote for the exercises in § 7.1.2 (p. 260).
+*/
+#include "7.9.h"
 #include <iostream>
+#include <istream>
 #include <ostream>
 
-int main() {
-  Person person;
+std::istream &read(std::istream &is, Person &person) {
+  is >> person.name >> person.address;
+  return is;
+}
 
-  person.name = "hsun";
-  person.address = "China";
-
-  std::cout << person.name << "'s address is " << person.address << std::endl;
+std::ostream &read(std::ostream &os, const Person &person) {
+  os << person.name << " " << person.address;
+  return os;
 }

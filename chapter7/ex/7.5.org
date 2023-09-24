@@ -1,0 +1,20 @@
+* Question:
+Exercise 7.5: Provide operations in your Person class to return the name and address. Should these functions be const? Explain your choice.
+
+* Answer:
+#+begin_src cpp
+  struct Person{
+  public:
+    std::string getName() const{
+      return this-> name;
+    }
+    std::string getAddress() const{
+      return this-> address;
+    }
+  private:  
+    std::string name;
+    std::string address;
+  
+  };
+#+end_src
+getName adn getAddress doesn't change the Object, so we declare and define them const.

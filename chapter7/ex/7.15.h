@@ -1,3 +1,6 @@
+/*
+  Exercise 7.15: Add appropriate constructors to your Person class.
+ */
 #ifndef PERSON_H
 #define PERSON_H
 

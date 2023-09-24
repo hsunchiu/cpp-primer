@@ -1,0 +1,5 @@
+* Question:
+Exercise 7.10: What does the condition in the following if statement do? if (read(read(cin, data1), data2))
+
+* Answer:
+read data1 from cin then read data2 from cin, if the cin is ok, do something.
