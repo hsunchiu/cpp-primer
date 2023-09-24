@@ -1,0 +1,11 @@
+* Question:
+It is a somewhat common mistake to define parameters that a function does not change as (plain) references. Doing so gives the function’s caller the misleading impression that the function might change its argument’s value. Moreover, using a reference instead of a reference to const unduly limits the type of arguments that can be used with the function. As we’ve just seen, we cannot pass a const object, or a literal, or an object that requires conversion to a plain reference parameter.
+
+* Answer:
+#+begin_src cpp
+  int max(int i, int *pi){
+    if (i < *pi)
+      return *pi;
+    return i;
+  }
+#+end_src

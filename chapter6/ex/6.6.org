@@ -1,0 +1,16 @@
+* Question:
+Exercise 6.6: Explain the differences between a parameter, a local variable, and a local static variable. Give an example of a function in which each might be useful.
+
+* Answer:
+a parameter is in the declared in the function's parameter list. Its scope is for the all function body. lifetime is when the function call end, the parameter destoryed.
+a local varaible is declared in function body,its scope is begining at the place where it's declared, ending the function body end. Lifetime like the scope.
+a local variable is declared in function boyy with keyword `static`, its scope is like local body, but its value is initialized when is first call, ends with the program terminated.
+Example:
+#+begin_src cpp
+  int func(int v/*parameter*/){
+    static int cnt; // static local variable, it's useful when we want to record some long-time status.
+    int v2;         // local variable
+  }
+#+end_src
+
+

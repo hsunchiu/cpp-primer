@@ -1,0 +1,9 @@
+* Question:
+Exercise 6.31: When is it valid to return a reference? A reference to
+const?
+
+* Answer:
+Whether a function call is an lvalue (§ 4.1.1, p. 135) depends on the return type of the function. Calls to functions that return references are lvalues;
+If the return type is a reference to const, then (as usual) we may not assign to the result of the call.
+Principle:
+Do not return reference of local object.

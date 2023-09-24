@@ -1,0 +1,7 @@
+* Question:
+Exercise 6.49: What is a candidate function? What is a viable function?
+
+* Answer:
+A candidate function is a function with the same name as the called function and for which a declaration is visible at the point of the call. In this example, there are four candidate functions named f.
+he second step selects from the set of candidate functions those functions that can be called with the arguments in the given call. The selected functions are the viable functions.
+

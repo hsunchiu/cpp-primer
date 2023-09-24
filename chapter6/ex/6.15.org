@@ -1,0 +1,28 @@
+* Question:
+Exercise 6.15: Explain the rationale for the type of each of find_char’s parameters In particular, why is s a reference to const but occurs is a plain reference? Why are these parameters references, but the char parameter c is not? What would happen if we made s a plain reference? What if we made occurs a reference to const?
+
+* Answer:
+Note(find_char defination):
+#+begin_src cpp
+  // returns the index of the first occurrence of c in s
+  // the reference parameter occurs counts how often c occurs
+  string::size_type find_char(const string &s, char c,
+                              string::size_type &occurs)
+  {
+    auto ret = s.size(); // position of the first occurrence, if any
+    occurs = 0; // set the occurrence count parameter
+    for (decltype(ret) i = 0; i != s.size(); ++i) {
+      if (s[i] == c) {
+        if (ret == s.size())
+          ++occurs;  // remember the first occurrence of c
+        ret = i;// increment the occurrence count
+      }
+    }
+      return ret;   // count is returned implicitly in occurs
+   }
+#+end_src
+s is the string we want find the `c`, c is the character to be found in s,
+occurs is the reference type changed by the funtion when called.
+
+for save memory, we just past the reference of s, `const` to denote the s can't be changed in the function. c is declared by  char to save the memory when call.
+if we make a plain reference, we may change the s, it is very difficult to debug when some errors happen.If we make occurs reference to const, the code will not pass the compile.

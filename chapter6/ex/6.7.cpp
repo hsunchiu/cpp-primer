@@ -1,10 +1,14 @@
+/*
+  Exercise 6.7: Write a function that returns 0 when it is first called and then
+  generates numbers in sequence each time it is called again.
+ */
+
 #include <iostream>
 using namespace std;
 
 int call() {
   static int count = 0;
-
-  return count++ > 0 ? 1 : 0;
+  return count++;
 }
 
 int main() {

@@ -1,0 +1,6 @@
+* Question:
+Exercise 6.35: In the call to fact, why did we pass val - 1 rather than val--?
+
+* Answer:
+val - 1 will be pass the value to `fact` funciton, while use val--, the unincremented value will pass to `fact` function, it will get an infinite recursion.
+

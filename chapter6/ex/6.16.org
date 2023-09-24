@@ -1,0 +1,15 @@
+* Question:
+Exercise 6.16: The following function, although legal, is less useful than it
+might be. Identify and correct the limitation on this function:
+#+begin_src cpp
+  bool is_empty(string& s) { return s.empty(); }
+#+end_src
+
+* Answer:
+if want pass string literal, compiler will arise error. Fix it:
+#+begin_src cpp
+  bool is_empty(const string &s){
+    return s.empty();
+  }
+#+end_src
+

@@ -1,0 +1,13 @@
+* Question:
+Exercise 6.14: Give an example of when a parameter should be a reference type. Give an example of when a parameter should not be a reference.
+
+* Answer:
+When memory is high const or must change the value of argument, `pass by reference` is a good idea.
+#+begin_src cpp
+  void swap(int &a,int &b);
+#+end_src
+
+When the argemunt doesn't be changed and the cost of paramenter's size is less than pointer's size,we can pass by value;
+#+begin_src cpp
+  int add(int a, int b);
+#+end_src

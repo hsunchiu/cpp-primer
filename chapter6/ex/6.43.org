@@ -1,0 +1,9 @@
+* Question:
+Exercise 6.43: Which one of the following declarations and definitions would
+you put in a header? In a source file? Explain why.
+(a) inline bool eq(const BigInt&, const BigInt&) {...}
+(b) void putValues(int *arr, int size);
+* Answer:
+(a) in header, (b) int source code
+Unlike other functions, inline and constexpr functions may be defined multiple times in the program. After all, the compiler needs the definition, not just the declaration, in order to expand the code. However, all of the definitions of a given inline or constexpr must match exactly. As a result, inline and constexpr functions normally are defined in headers.
+

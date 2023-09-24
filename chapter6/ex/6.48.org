@@ -1,0 +1,12 @@
+* Question:
+Exercise 6.48: Explain what this loop does and whether it is a good use of assert:
+#+begin_src cpp
+  string s;
+  while (cin >> s && s != sought) { } // empty body assert(cin);
+  assert(cin);
+#+end_src
+
+* Answer:
+read a word to s and check until the word is sought, then the status of cin, if cin  is not legal, exit the program.
+It's not a good use of assert, because eof is a common condition.but assert will arise the program terminated.
+

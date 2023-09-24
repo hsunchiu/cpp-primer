@@ -1,0 +1,21 @@
+* Question:
+Exercise 6.50: Given the declarations for f from page 242, list the viable functions, if any for each of the following calls. Indicate which function is the best match, or if the call is illegal whether there is no match or why the call is ambiguous.
+(a) f(2.56, 42)
+(b) f(42)
+(c) f(42, 0)
+(d) f(2.56, 3.14)
+
+* Answer:
+Reference:
+#+begin_src cpp
+  void f();
+  void f(int);
+  void f(int, int);
+  void f(double, double = 3.14);
+#+end_src
+
+(a) illegal, it can call f(int, int) and void(double, double = 3.14);
+(b) legal, call f(int);
+(c) legal, call f(int,int)
+(d) legal, call f(double, double = 3.14);
+

@@ -1,0 +1,8 @@
+* Qustion:
+Exercise 6.1: What is the difference between a parameter and an
+argument?
+
+* Answer:
+arguments: Values supplied in a function call that are used to initialize the function’s parameters.
+parameters: Local variables declared inside the function parameter list. Parameters are initialized by the arguments provided in each function call.
+The arguments are used to initialize the function’s parameters.

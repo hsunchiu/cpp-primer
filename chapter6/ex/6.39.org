@@ -1,0 +1,17 @@
+* Question:
+Exercise 6.39: Explain the effect of the second declaration in each one of
+the following sets of declarations. Indicate which, if any, are illegal.
+(a)
+int calc(int, int);
+int calc(const int, const int);
+(b)
+int get();
+double get();
+(c)
+int *reset(int *);
+double *reset(double *);
+
+* Answer:
+(a) illegal, redeclared. A parameter that has a top-level const is indistinguishable from one without a top-level const
+(b) illegal, it is an error for two functions to differ only in terms of their return types. If the parameter lists of two functions match but the return types differ, then the second declaration is an error.
+(c) legal

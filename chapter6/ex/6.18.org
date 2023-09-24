@@ -1,0 +1,18 @@
+* Question:
+Exercise 6.18: Write declarations for each of the following functions. When you write these declarations, use the name of the function to indicate what the function does.
+(a) A function named compare that returns a bool and has two parameters that are references to a class named matrix.
+(b) A function named change_val that returns a vector<int> iterator and takes two parameters: One is an int and the other is an iterator for a vector<int>.
+
+* Answer:
+(a)
+#+begin_src cpp
+  bool compare(const matrix &a,const matrix &b);
+#+end_src
+(b) 
+#+begin_src cpp
+  vector<int>::iterator change_val(vector<int>::iterator it, int v);
+#+end_src
+I think the question is not correct: How could I change value of the vector if we doesn't get the vector's other information.
+#+begin_src cpp
+  vector<int>::iterator change_val(vector<int> iv, int v);
+#+end_src

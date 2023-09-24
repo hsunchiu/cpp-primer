@@ -1,0 +1,7 @@
+* Question:
+Exercise 6.34: What would happen if the stopping condition in factorial
+were
+if (val != 0)
+
+* Answer:
+ifinite recursion and OOM.

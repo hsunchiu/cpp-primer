@@ -1,0 +1,12 @@
+* Qustion:
+Exercise 6.41: Which, if any, of the following calls are illegal? Why? Which, if any, are legal but unlikely to match the programmer’s intent? Why?
+char *init(int ht, int wd = 80, char bckgrnd = ' ');
+(a) init();
+(b) init(24,10);
+(c) init(14, '*');
+
+* Answer:
+(a) illegal, lack the first argument.
+(b) legal
+(c) legal, `'*'` will be  converted to a int type implictly.
+

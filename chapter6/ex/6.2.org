@@ -1,0 +1,49 @@
+* Question:
+Exercise 6.2: Indicate which of the following functions are in error and why. Suggest how you might correct the problems.
+
+(a)
+#+begin_src cpp
+  int f() {
+    string s;
+  // ... return s;
+  }
+#+end_src
+
+(b)
+#+begin_src cpp
+f2(int i) { /* ... */ }
+#+end_src
+(c)
+#+begin_src cpp
+int calc(int v1, int v1)  /* ... */ }
+#+end_src
+(d)
+#+begin_src
+double square(double x) return x * x;
+#+end_src
+
+* Answer:
+(a) the return type doesn't match the declaration.
+#+begin_src cpp
+  string f(){
+    string s;
+    // ... return s
+  }
+#+end_src
+
+(b) the return type is not declarated(need adding void).Fix it:
+#+begin_src cpp
+  void f2(int i) {/**/}
+#+end_src
+
+(c) Uncompleted declaration for function.except `{` after `int v1)`. And have the same name in parameter list. Fix it:
+#+begin_src cpp
+  int calc(int v1, int v2) {/**/}
+#+end_src
+
+(d) Uncompleted declaration, need curly brace for the function body. Fix it:
+#+begin_src cpp
+  double square(double x){
+    return x * x;
+  }
+#+end_src

@@ -1,0 +1,12 @@
+* Question:
+Exercise 6.46: Would it be possible to define isShorter as a constexpr? If so, do so. If not, explain why not.
+
+* Answer:
+No.
+
+A constexpr function is defined like any other function but must meet certain restrictions: The return type and the type of each parameter in a must be a literal type
+
+But std::string(parameter of isShorter) is not a literal type.
+
+more discusses: #22 https://github.com/ReadingLab/Discussion-for-Cpp/issues/22
+
