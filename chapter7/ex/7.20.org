@@ -1,0 +1,15 @@
+* Question:
+Exercise 7.20: When are friends useful? Discuss the pros and cons of using
+friends.
+
+* Answer:
+the useful functions can refer to class members in the class scope without needing to explicitly prefix them with the class name.
+
+Pros:
+you can access all the nonpublic members conveniently.
+sometimes, more readable to the users of class.
+
+Cons:
+
+lessens encapsulation and therefore maintainability.
+code verbosity, declarations inside the class, outside the class.
