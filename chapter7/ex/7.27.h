@@ -1,34 +1,24 @@
 /*
-  Exercise 7.32: Define your own versions of Screen and Window_mgr in
-  which clear is a member of Window_mgr and a friend of Screen.
+  Exercise 7.27: Add the move, set, and display operations to your
+  version of Screen. Test your class by executing the following code:
+
+  Screen myScreen(5, 5, 'X');
+  myScreen.move(4,0).set('#').display(cout);
+  cout << "\n";
+  myScreen.display(cout);
+  cout << "\n";
  */
 
 #ifndef SCREEN_H
 #define SCREEN_H
 
 #include <string>
-#include <vector>
 
 #ifndef NDEBUG
 #include <iostream>
 #endif
 
-class Screen;
-
-class Window_mgr {
-public:
-  // location ID for each screen on the window
-  using ScreenIndex = std::vector<Screen>::size_type;
-  // reset the Screen at the given position to all blanks
-  void clear(ScreenIndex);
-
-private:
-  std::vector<Screen> screens;
-};
-
 class Screen {
-  friend void Window_mgr::clear(ScreenIndex);
-
 public:
   using pos = std::string::size_type;
 
@@ -37,11 +27,11 @@ public:
 
   // takes values for height and width and initilizes contents to hold the given
   // number of blanks
-  Screen(pos ht, pos wd) : height(ht), width(wd), contents(ht * wd, ' ') {}
+  Screen(pos ht, pos wd) : heigth(ht), width(wd), contents(ht * wd, ' ') {}
 
   // cursor initialized toe 0 by its in-class initializer
   Screen(pos ht, pos wd, char c)
-      : height(ht), width(wd), contents(ht * wd, c) {}
+      : heigth(ht), width(wd), contents(ht * wd, c) {}
 
   Screen &set(char c) {
     contents[cursor] = c;
@@ -76,21 +66,12 @@ public:
     return *this;
   }
 
-  Screen::pos size() const;
-
 private:
-  pos cursor = 0, height = 0, width = 0;
+  pos cursor = 0, heigth = 0, width = 0;
   std::string contents;
 
   void do_display(std::ostream &os) const { os << contents; }
 };
-
-inline void Window_mgr::clear(ScreenIndex i) {
-  // s is a reference to the Screen we want to clear
-  Screen &s = screens[i];
-  // reset the contents of that Screen to all blanks
-  s.contents = std::string(s.height * s.width, ' ');
-}
 
 inline Screen &Screen::move(pos r, pos c) {
   pos row = r * width; // compoute the row location
@@ -102,8 +83,6 @@ inline Screen &Screen::move(pos r, pos c) {
 char Screen::get(pos r, pos c) const { // declared as inline in the class
   pos row = r * width;                 // compute row location
   return contents[row + c];            // return character at the given column
-};
-
-inline Screen::pos Screen::size() const { return height * width; }
+}
 
 #endif

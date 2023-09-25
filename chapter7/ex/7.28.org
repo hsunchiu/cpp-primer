@@ -1,0 +1,16 @@
+* Question:
+Exercise 7.28: What would happen in the previous exercise if the return
+type of move, set, and display was Screen rather than Screen&?
+
+* Answer:
+Had we defined move and set to return Screen, rather than Screen&, this
+statement would execute quite differently. In this case it would be equivalent to:
+
+#+begin_src cpp
+  //if move returns Screen not Screen&
+  Screen temp = myScreen.move(4,0); // the return value would be copied
+  temp.set('#'); // the contents inside myScreen would be unchanged
+  // so same as set and display
+#+end_src
+
+

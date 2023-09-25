@@ -1,0 +1,26 @@
+* Question:
+Exercise 7.33: What would happen if we gave Screen a size member
+defined as follows? Fix any problems you identify.
+
+#+begin_src cpp
+  pos Screen::size() const
+  {
+    return height * width;
+  }
+#+end_src
+
+* Answer:
+the `pos` is not defined, the compile can't find the definition of pos. We need the scope operator to specify which `pos`. Fix it:
+#+begin_src cpp
+  class Screen{
+    // add the declaration for the member function
+    pos Screen::size() const;
+
+    // others;
+  };
+
+  // specify the pos by using class namespace
+  inline Screen::pos Screen::size() const{
+    return height * width;
+  }
+#+end_src
