@@ -1,0 +1,41 @@
+* Question:
+Exercise 7.58: Which, if any, of the following static data member declarations and definitions are errors? Explain why.
+
+#+begin_src cpp
+  // example.h
+  class Example{
+  public:
+    static double rate = 6.5;
+    static const int vecSize = 20;
+    static vector<double> vec(vecSize);
+  };
+  // example.C
+  #include "example.h"
+  double Example::rate; vector<double> Example::vec;
+#+end_src
+* Question:
+#+begin_src cpp
+  static double rate = 6.5;
+  //                ^
+  //            rate should be a constant expression.
+
+  static vector<double> vec(vecSize);
+  //                            ^
+  //            we may not specify an in-class initializer inside parentheses.
+#+end_src            
+  Fixed:
+#+begin_src cpp
+  // example.h
+  class Example {
+  public:
+      static constexpr double rate = 6.5;
+      static const int vecSize = 20;
+      static vector<double> vec;
+  };
+
+  // example.C
+  #include "example.h"
+  constexpr double Example::rate;
+  vector<double> Example::vec(Example::vecSize);
+
+#+end_src

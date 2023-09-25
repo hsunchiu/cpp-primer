@@ -1,0 +1,6 @@
+* Question:
+Exercise 7.44: Is the following declaration legal? If not, why not?
+vector<NoDefault> vec(10);
+
+* Answer:
+In clang++, It's legal, compiler may synthesize the default constructor.

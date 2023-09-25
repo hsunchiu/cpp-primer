@@ -1,0 +1,25 @@
+* Question:
+Exercise 7.55: Is the Data class from § 7.5.5 (p. 298) a literal class? If not, why not? If so, explain why it is literal.
+
+* Answer:
+no.
+
+std::string is not a literal type, and it can be verified by following codes:
+
+#+begin_src cpp
+#include <string>
+#include <iostream>
+#include <type_traits>
+
+struct Data {
+    int ival;
+    std::string s;
+};
+
+int main()
+{
+    std::cout << std::boolalpha;
+    std::cout << std::is_literal_type<Data>::value << std::endl;
+    // output: false
+}
+#+end_src

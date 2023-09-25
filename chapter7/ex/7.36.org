@@ -1,0 +1,15 @@
+* Question:
+Exercise 7.36: The following initializer is in error. Identify and fix the
+problem.
+#+begin_src cpp
+  struct X {
+    X (int i, int j): base(i), rem(base % j) { }
+  };
+#+end_src
+* Answer:
+the sequence of initialized rem depends on the result of base if the data member 's sequence is not different. Fix it: not initialize the data member by other data member
+#+begin_src cpp
+  struct X {
+    X(int i, int j): base(i), rem(i % j){}
+  };
+#+end_src

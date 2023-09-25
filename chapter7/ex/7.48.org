@@ -1,0 +1,13 @@
+* Question:
+Exercise 7.48: Assuming the Sales_data constructors are not explicit, what operations happen during the following definitions
+#+begin_src cpp
+    string null_isbn("9-999-99999-9");
+    Sales_data item1(null_isbn);
+    Sales_data item2("9-999-99999-9");
+#+end_src
+What happens if the Sales_data constructors are explicit?
+
+* Answer:
+ the last line will line will arise compiler err, "9-999-99999-9" must be casted to string.
+
+ if the Sales_data constructors are explicit. same as the non-explicit version.

@@ -1,0 +1,15 @@
+* Question:
+Exercise 7.37: Using the version of Sales_data from this section, determine which constructor is used to initialize each of the following variables and list the values of the data members in each object:
+#+begin_src cpp
+  Sales_data first_item(cin);
+
+  int main() {
+    Sales_data next;
+    Sales_data last("9-999-99999-9");
+  }
+#+end_src
+
+* Answer:
+`first_item` calls `Sales_data(std::istream &is)`, it depands on the input.
+`next` calls `Sales_data(std::string s = ""`, defines the default constructor as well as one that takes a string argument
+`last` calls `Sales_data(std::string s = "")`, overwrite the default argument, the bookNo is `9-999-9999-9`.

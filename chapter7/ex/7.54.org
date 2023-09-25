@@ -1,0 +1,5 @@
+* Question:
+Exercise 7.54: Should the members of Debug that begin with set_ be declared as constexpr? If not, why not?
+
+* Answer:
+shouldn't, cause a constexpr function must contain exactly one return statement.

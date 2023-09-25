@@ -1,0 +1,20 @@
+* Question:
+Exercise 7.52: Using our first version of Sales_data from § 2.6.1 (p. 72),
+explain the following initialization. Identify and fix any problems.
+
+Sales_data item = {"978-0590353403", 25, 15.99};
+
+* Answer:
+In my opinion ,the aim of the problem is Aggregate Class. Test-makers think that Sales_data is Aggregate Class,so Sales_data should have no in-class initializers if we want to initialize the data members of an aggregate class by providing a braced list of member initializers.
+
+The initializers must appear in declaration order of the data members. That is, the initializer for the first member is first, for the second is next, and so on.
+
+FIXED:
+#+begin_src cpp
+struct Sales_data {
+    std::string bookNo;
+    unsigned units_sold;
+    double revenue;
+};
+#+end_src
+
