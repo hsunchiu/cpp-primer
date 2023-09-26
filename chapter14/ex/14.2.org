@@ -1,0 +1,14 @@
+* Question:
+Exercise 14.2: Write declarations for the overloaded input, output, addition,
+and compound-assignment operators for Sales_data.
+
+* Answer:
+#+begin_src cpp
+  class Sales_data{
+    friend ostream & operator<<(ostream& os,const Sales_data&);
+    friend istream & operator>>(istream& is,Sales_data&);
+    friend Sales_data operator+(const Sales_data&lhs,const Sales_data &rhs);
+  public:
+    Sales_data operator+=(const Sales_data&rhs);
+  };
+#+end_src
