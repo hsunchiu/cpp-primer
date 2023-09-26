@@ -1,3 +1,8 @@
+/*
+  Exercise 8.8: Revise the program from the previous exercise to append its
+  output to its given file. Run the program on the same output file at least
+  xtwice to ensure that the data are preserved.
+ */
 #include "8.8.h"
 #include <cstdlib>
 #include <fstream>

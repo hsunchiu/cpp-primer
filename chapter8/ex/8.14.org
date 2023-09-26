@@ -1,0 +1,6 @@
+* Question:
+Exercise 8.14: Why did we declare entry and nums as const auto &?
+
+* Answer:
+cause they are all class type, not the built-in type. so reference more effective.
+output shouldn't change their values. so we added the const.

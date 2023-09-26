@@ -1,0 +1,8 @@
+* Question:
+Exercise 8.3: What causes the following while to terminate?
+while (cin >> i) / * ... */
+
+
+* Answer:
+
+When cin encounters some unavailable type(the type is not satisfied with the type of int), or encounters the end-of-file.

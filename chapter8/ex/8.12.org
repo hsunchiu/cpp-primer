@@ -1,0 +1,5 @@
+* Question:
+Exercise 8.12: Why didn’t we use in-class initializers in PersonInfo?
+
+* Answer:
+Cause we need a aggregate class here. so it should have no in-class initializers.
