@@ -9,7 +9,7 @@
 using namespace std;
 
 int main() {
-  list<char *> clist = {"hello", "world"};
+  list<const char *> clist = {"hello", "world"};
 
   vector<string> sv;
 

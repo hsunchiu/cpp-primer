@@ -1,0 +1,14 @@
+* Question:
+Exercise 9.2: Define a list that holds elements that are deques that hold
+ints.
+
+* Answer:
+#+begin_src cpp
+  #include <list>
+  #include <deque>
+  using std::list;
+  using std::deque;
+
+  list<deque<int>> ldi;
+
+#+end_src

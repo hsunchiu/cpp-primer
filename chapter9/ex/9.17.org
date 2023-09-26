@@ -4,4 +4,6 @@ constraints does the following usage place on the types of c1 and c2?
 if (c1 < c2)
 
 * Answer:
-the class container must have the element’s '<' operator when design the class.
+the class container must have the element’s '<' operator when design the class, and have the same type.
+
+Both c1 and c2 are the containers except the unordered associative containers.(@pezy)

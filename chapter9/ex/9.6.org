@@ -2,9 +2,17 @@
 Exercise 9.6: What is wrong with the following program? How might you
 correct it?
 #+begin_src c++
-list<int> lst1;
-list<int>::iterator iter1 = lst1.begin(),
-                    iter2 = lst1.end();
-while (iter1 < iter2) /* ... */
+  list<int> lst1;
+  list<int>::iterator iter1 = lst1.begin(),
+    iter2 = lst1.end();
+  while (iter1 < iter2) /* ... */
 #+end_src
 
+* Answer:
+list<T> doesn't have `operator<` overload.
+#+begin_src cpp
+  list<int> lst1;
+  list<int>::iterator iter1 = lst1.begin(),
+    iter2 = lst1.end();
+  while (iter1 < iter2) /* ... */
+#+end_src

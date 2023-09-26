@@ -1,6 +1,10 @@
 * Question:
-Exercise 9.25: In the program on page 349 that erased a range ofC++ Primer, Fifth Edition
+Exercise 9.25: In the program on page 349 that erased a range of
 elements, what happens if elem1 and elem2 are equal? What if elem2 or
 both elem1 and elem2 are the off-the-end iterator?
 
 * Answer:
+elem2  indicate the return the refers to one past the last element.
+if elem1 and elm2 are the off-the-end iterator. elem2 is the off-the end iterator.
+
+
