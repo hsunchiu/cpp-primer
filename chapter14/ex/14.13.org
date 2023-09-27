@@ -1,0 +1,18 @@
+* Question:
+Exercise 14.13: Which other arithmetic operators (Table 4.1 (p. 139)), if
+any, do you think Sales_data ought to support? Define any you think the
+class should include.
+
+* Answer:
+I think only addition(+) should ought to support.
+#+begin_src cpp
+    // assumes that both objects refer to the same book
+  Sales_data
+  operator+(const Sales_data &lhs, const Sales_data &rhs)
+  {
+    Sales_data sum = lhs;// copy data members from lhs into sum
+    sum += rhs;  // add rhs into sum
+    return sum;
+  }
+#+end_src
+

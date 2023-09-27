@@ -1,0 +1,16 @@
+* Question:
+Exercise 14.11: What, if anything, is wrong with the following Sales_data
+input operator? What would happen if we gave this operator the data in the
+previous exercise?
+#+begin_src cpp
+  istream& operator>>(istream& in, Sales_data& s)
+  {
+    double price;
+    in >> s.bookNo >> s.units_sold >> price;
+    s.revenue = s.units_sold * price;
+    return in;
+  }
+#+end_src
+
+* Answer:
+no input check. nothing happened.(but I think the maybe change some variable of the Sales_data was changed if the Sales_data is wrong)

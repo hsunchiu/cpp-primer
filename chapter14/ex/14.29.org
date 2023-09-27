@@ -1,0 +1,6 @@
+* Question:
+Exercise 14.29: We did not define a const version of the increment and
+decrement operators. Why not?
+
+* Answer:
+increment and decrement operator will change value of object, so we don't define a const version.

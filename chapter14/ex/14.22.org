@@ -1,0 +1,24 @@
+* Question:
+Exercise 14.22: Define a version of the assignment operator that can assign
+a string representing an ISBN to a Sales_data.
+
+* Answer:
+#+begin_src cpp
+  #ifndef _SALES_DATA_H
+  #define _SALES_DATA_H
+  #include <string>
+  class Sales_data{
+  public:
+    Sales_data & operator=(std::string isbn){
+      bookNo = isbn;
+      return *this;
+    }
+
+  private:
+    std::string bookNo;
+    unsigned units_sold  = 0;
+    double revenue = 0.0;
+  }
+
+  #endif
+#+end_src

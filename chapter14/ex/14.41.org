@@ -1,0 +1,13 @@
+* Question:
+Exercise 14.41: Why do you suppose the new standard added lambdas?
+Explain when you would use a lambda and when you would write a class
+instead.
+
+* Answer:
+For some scenarios, we just want a little code to handle something, so just lambdas is included.It's mostly used in some business logic.
+
+If the we just want a piece of code, just use lambda, if the lambda code size is too big, consider using a class or using a function.
+
+
+
+

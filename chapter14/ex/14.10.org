@@ -1,0 +1,9 @@
+* Question:
+Exercise 14.10: Describe the behavior of the Sales_data input operator if
+given the following input:
+(a) 0-201-99999-9 10 24.95
+(b) 10 24.95 0-210-99999-9
+
+* Answer:
+the sequence of the input is not valid, so we get the empty object. the bookNo is an empty string, the units_sold is zero.
+the revenue is zero(double).

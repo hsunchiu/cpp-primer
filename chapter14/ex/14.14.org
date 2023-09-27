@@ -1,0 +1,6 @@
+* Question:
+Exercise 14.14: Why do you think it is more efficient to define operator+
+to call operator+= rather than the other way around
+
+* Answer:
+Even it's hard to read, but it's clear and the code is cohesion.

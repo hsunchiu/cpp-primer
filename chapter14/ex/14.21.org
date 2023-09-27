@@ -1,0 +1,37 @@
+* Question:
+Exercise 14.21: Write the Sales_data operators so that + does the actual
+addition and += calls +. Discuss the disadvantages of this approach compared
+to the way these operators were defined in § 14.3 (p. 560) and § 14.4 (p.
+564).
+
+* Answer:
+#+begin_src cpp
+  #ifndef _SALES_DATA_H
+  #define _SALES_DATA_H
+  #include <string>
+
+  class Sales_data{
+     inline friend Sales_data operator+(Sales_data&lhs, Sales_data&rhs){
+      Sales_data temp;
+      temp.units_sold = lhs.units_sold + rhs.units_sold;
+      temp.revenue = lhs.revenue + rhs.revenue;
+      return temp;
+    }
+  public:
+    Sales_data & operator+=(Sales_data&item){
+      ,*this = *this + item;
+      return *this;
+    }
+  
+  private:
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+  };
+  #endif
+#+end_src
+`+=` to call `+`, it will create a temporary object, it not obey the meaning `+-`. At the same time, a member function to call friend function is a wired behavior.
+
+
+
+
