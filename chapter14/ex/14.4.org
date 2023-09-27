@@ -1,0 +1,29 @@
+* Quesiton:
+Exercise 14.4: Explain how to decide whether the following should be class
+members:
+(a) %
+(b) %=
+(c) ++
+(d) ->
+(e) <<
+(f) &&
+(g) ==
+(h) ()
+
+* Answer:(TODO)
+
+(a) symmetric operator. Hence, non-member
+
+(b) changing state of objects. Hence, member
+
+(c) changing state of objects. Hence, member
+
+(d) = () [] -> must be member
+
+(e) non-member
+
+(f) symmetric , non-member
+
+(g) symmetric , non-member
+
+(h) = () [] -> must be member

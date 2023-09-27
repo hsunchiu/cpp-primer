@@ -1,0 +1,24 @@
+* Question:
+Exercise 14.3: Both string and vector define an overloaded `==` that can be used to compare objects of those types. Assuming svec1 and svec2 are vectors that hold strings, identify which version of `==` is applied in each of the following expressions:
+(a)
+#+begin_src cpp
+  "cobble" == "stone"
+#+end_src
+(b)
+#+begin_src cpp
+  svec1[0] == svec2[0];
+#+end_src
+(c)
+#+begin_src cpp
+  svec1 == svec2;
+#+end_src
+(d)
+#+begin_src cpp
+  svec1[1] == "stone"
+#+end_src
+
+* Answer:
+(a) illegal, the builtin type "const char*" 's operator == is not defined.
+(b) operator==(const string&, const string&)
+(c) operator==(const vector<string>&,const vector<string>&)
+(d) operator==(const string&, const string&)
