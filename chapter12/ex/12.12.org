@@ -12,6 +12,6 @@ auto sp = make_shared<int>();
 
 * Answer:
 (a) it's legal.
-(b) it's legal and after the process, the temporay int memory will be freed. It's  reasonable.
-(c) it's legal, but after the process, the p will be a dangling pointer.
-(d) it's legal. try to convert the type, but the type is same, it's not necessary.
+(b) it's illegal and after the process, a pointer can't explicitly converted to a shared pointer.
+(c) it's illegal, just like (3), a plain pointer can't explicitly converted to a shared pointer.
+(d) it's legal. 
